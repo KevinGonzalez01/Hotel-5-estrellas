@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
      <link rel="stylesheet" href="../Estilos/Estilos.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!--Biblioteca Tipografia-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+
+    <!--Biblioteca calendario-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 </head>
 <body>
+
+<div class="contenedor">
+
+    <div class="mea-culpa-regular">Bacatá Crown</div>
 
      <nav>
 
@@ -28,7 +42,7 @@
 
             <li><a href="Contacto.html">Contacto</a></li>
 
-            <li><a href="Portal de clientes.html">Registrate</a></li>
+            <li><a href="Portal de clientes.html"><i class="fa-solid fa-circle-user"></i></i></a></li>
 
         </ul>
 
@@ -45,6 +59,83 @@
 </div>
 
 <script src="../Js/slider.js"></script>
+
+<!--Reserva-->
+
+<form action="#" method="post">
+
+    <div class="fila">
+
+    <div>
+    <label for="llegada">Llegada</label><br>
+    <input type="date" id="llegada" name="llegada" required><br><br>
+    </div>
+
+    <div>
+    <label for="salida">Salida</label><br>
+    <input type="date" id="salida" name="salida" required><br><br>
+    </div>
+
+    <div>
+    <label for="adultos">Adultos</label><br>
+    <input type="number" id="adultos" name="adultos" min="1" max="10" value="1" required><br><br>
+    </div>
+
+    <div>
+    <label for="ninos">Niños</label><br>
+    <input type="number" id="ninos" name="ninos" min="0" max="10" value="0"><br><br>
+    </div>
+
+     <button class="reserva">Reservar</button>
+
+    </div>
+
+</form>
+
+<!--Sobre Nosotros-->
+
+<div class="sobre-nosotros">
+<div class="h1"> <center>Sobre Nosotros</center></div>
+<br>
+    
+        Nuestro hotel está ubicado en el centro de la ciudad, cerca de los principales sitios turísticos y comerciales.
+        Contamos con 50 habitaciones cómodas y completamente equipadas para brindar una excelente experiencia a nuestros huéspedes.
+    
+</div>
+
+<!--Calificacion-->
+
+<ul class="valoraciones">
+
+    <li>
+        <span class="nota">4.4/5</span><br>
+        <strong>Excelente</strong><br>
+        Basado en 5489 valoraciones
+    </li>
+
+    <li>
+        <strong>TOP 1</strong><br>
+        Hoteles en Santa Fé
+    </li>
+
+    <li>
+        <strong>Booking.com</strong><br>
+        8.9/10
+    </li>
+
+    <li>
+        <strong>Hotels.com</strong><br>
+        8.8/10
+    </li>
+
+    <li>
+        <strong>Expedia</strong><br>
+        8.8/10
+    </li>
+
+</ul>
+
+</div>
 
 
 </body>
