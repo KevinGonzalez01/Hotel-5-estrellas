@@ -1,193 +1,527 @@
-*{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-            background-color: beige;
-        }
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: rgb(250, 250, 248);
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+}
 
 
-.contenedor-principal{
+/*HERO*/
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 700px;
+
+    overflow: hidden;
+}
+
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    z-index: 1;
+}
+
+.slides {
     display: flex;
-    flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.8s ease;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+
+    flex: 0 0 100%;
+
+    object-fit: cover;
+}
+
+
+/*LOGO*/
+
+.logo {
+    position: absolute;
+
+    top: 15px;
+    left: 40px;
+
+    color: black;
+
+    font-family: "Mea Culpa", cursive;
+
+    font-size: 50px;
+
+    line-height: 1;
+
+    z-index: 10;
+
+    white-space: nowrap;
 }
 
 
 /*MENU*/
 
-        nav{
-            background-color: #333;
-            position: absolute;
-            top: 30px;
-            left: 600px;
-            font-size: 17px;
-        }
-
-        ul{
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            z-index: 1000;
-        }
-
-        li{
-            margin: 0;
-        }
-
-        a{
-            display: block;
-            padding: 15px 20px;
-            color: rgb(5, 5, 5);
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        a:hover{
-            color: rgb(248, 244, 244);
-        }
-
-        .fa-solid{
-            font-size: 30px;
-        }
-
-        .mea-culpa-regular {
-            position: absolute;
-            top: 15px;
-            left: 40px;
-            font-family: "Mea Culpa", cursive;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 50px;
-            z-index: 1000;
-        }
-
-
-/*SLIDER*/
-
-.slider{
-    position: relative;
-    width:100%;
-    max-width:1600px;
-    height:100vh;
-    margin:auto;
-    overflow:hidden;
-    z-index: 1;
-}
-
-.slides{
-    display:flex;
-    width:100%;
-}
-
-.slides img{
-    min-width:100%;
-    height:700px;
-    object-fit:cover;
-}
-
-
-/*Formulario Reserva*/
-
-form{
+nav {
     position: absolute;
-    top: 650px;
-    left: 500px;
-    width: 605px; 
-    height: 105px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    background: burlywood;
-    z-index: 1000;
+
+    top: 20px;
+    right: 20px;
+
+    width: auto;
+
+    z-index: 10;
 }
 
-.fila{
+
+nav ul {
     display: flex;
-    gap: 20px;
-}
 
-label{
-    font-size: center;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-#llegada{
-    width: 150px;
-    height: 40px;
-}
-
-#salida{
-    width: 150px;
-    height: 40px;
-    left: 30px;
-}
-
-input[type="date"]{
-    font-family: "Mea Culpa", cursive;
-    font-size: 20px;
-    color: #070707;
-    padding: 10px;
-}
-
-.reserva{
-    top: 10px;
-    width: 200px;
-    height: 50px;
-    border-radius: 20px;
-    border: 10px;
-    background-color: bisque;
-}
-
-/*Sobre Nosotros*/
-
-.sobre-nosotros{
-    background-color: transparent;
-    color: #070707;
-    position: relative;
-    top: 40px;
-    width: 1400px;
-    margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.h1{
-    font-size: 50px;
-}
-
-/*Calificacion*/
-
-.valoraciones{
-    top: 50px;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 3px;
+
     list-style: none;
-    position: relative;
-    margin: 0 auto;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+nav li {
+    margin: 0;
+}
+
+
+nav a {
+    display: block;
+
+    padding: 10px 9px;
+
+    color: black;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: white;
+}
+
+
+.fa-solid {
+    font-size: 28px;
+}
+
+
+/*FORMULARIO DE RESERVA*/
+
+.form-reserva {
+    position: absolute;
+
+    left: 50%;
+    bottom: 30px;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 40px);
+    max-width: 900px;
+
+    padding: 15px;
+
+    background-color: burlywood;
+
+    border-radius: 12px;
+
+    z-index: 20;
+}
+
+
+/* FILA */
+
+.fila {
+    display: flex;
+
+    align-items: end;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.campo label {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 16px;
+
+    color: black;
+}
+
+
+/* INPUTS */
+
+.campo input {
+    width: 150px;
+    height: 40px;
+
+    padding: 5px;
+
+    border: 1px solid #777;
+
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+}
+
+
+/* BOTON */
+
+.reserva {
+    width: 150px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background-color: bisque;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.reserva:hover {
+    transform: scale(1.03);
+}
+
+
+/*SOBRE NOSOTROS*/
+
+.sobre-nosotros {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 50px auto 0;
+
     padding: 20px;
-    background: #8fa8b5;
-}
 
-.valoraciones li{
-    flex: 1;
+    color: #070707;
+
+    font-family: Arial, Helvetica, sans-serif;
+
     text-align: center;
-    border-right: 1px solid #333;
-    padding: 0 15px;
 }
 
-.valoraciones li:last-child{
+
+.sobre-nosotros h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(32px, 5vw, 50px);
+}
+
+
+.sobre-nosotros p {
+    font-size: clamp(16px, 2vw, 20px);
+
+    line-height: 1.6;
+}
+
+
+/*VALORACIONES*/
+
+.valoraciones {
+    display: flex;
+
+    width: 90%;
+    max-width: 1500px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+
+    justify-content: space-around;
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    background-color: #8fa8b5;
+
+    border-radius: 10px;
+}
+
+
+.valoracion {
+    flex: 1 1 150px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 80px;
+
+    padding: 10px 15px;
+
+    text-align: center;
+
+    border-right: 1px solid #333;
+}
+
+
+.valoracion:last-child {
     border-right: none;
 }
 
-.nota{
+
+.nota {
     font-size: 35px;
+
     font-weight: bold;
 }
 
+/*Habitaciones*/
+
+.habitacion {
+    width: 90%;
+    max-width: 1450px;
+    margin: 40px auto;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 30px;
+
+    align-items: center;
+}
+
+/* INFORMACIÓN */
+.info {
+    width: 100%;
+    padding: 20px;
+}
+
+.info h1 {
+    font-size: clamp(28px, 3vw, 50px);
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: clamp(16px, 1.3vw, 21px);
+    line-height: 1.6;
+}
+
+.info h2 {
+    line-height: 2.5;
+    font-size: 20px;
+}
+
+/* FOTOS */
+.fotos {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: (2, 1fr);
+    gap: 15px;
+}
+
+.fotos img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fotos img:hover {
+    transform: scale(1.03);
+}
+
+/* CONTACTO Y UBICACIÓN */
+
+.Contacto {
+    background-color: beige;
+
+    width: 90%;
+    max-width: 1450px;
+    margin: 40px auto;
+
+    display: grid;  
+    grid-template-columns: 30% 70%;
+    gap: 40px;
+
+    align-items: start;
+}
 
 
+/* FORMULARIO */
 
+.formulario-contacto {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.formulario-contacto h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario-contacto label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #aaa;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+
+    box-sizing: border-box;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+}
+
+.formulario-contacto button {
+    width: 100%;
+
+    margin-top: 15px;
+    padding: 13px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: burlywood;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+    background-color: #d2a76d;
+}
+
+
+/* MAPA */
+
+.ubicacion {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.ubicacion h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.ubicacion p {
+    margin-bottom: 15px;
+}
+
+.mapa {
+    width: 100%;
+    height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
