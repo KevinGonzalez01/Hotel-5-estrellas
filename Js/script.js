@@ -56,3 +56,58 @@ function cambiarInfo(numero) {
     document.getElementById("precio").textContent =
         habitaciones[numero].precio;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+function cambiarImagen(boton, direccion) {
+
+    // Busca el slider donde está el botón
+    const slider = boton.parentElement;
+
+    // Busca todas las imágenes del slider
+    const imagenes = slider.querySelectorAll("img");
+
+    let imagenActual = 0;
+
+    // Busca cuál imagen está activa
+    imagenes.forEach((imagen, index) => {
+
+        if (imagen.classList.contains("activa")) {
+            imagenActual = index;
+        }
+
+        imagen.classList.remove("activa");
+
+    });
+
+
+    // Cambia la posición
+    imagenActual += direccion;
+
+
+    // Si llega al final vuelve al principio
+    if (imagenActual >= imagenes.length) {
+        imagenActual = 0;
+    }
+
+
+    // Si está al principio y retrocede va al final
+    if (imagenActual < 0) {
+        imagenActual = imagenes.length - 1;
+    }
+
+
+    // Muestra la nueva imagen
+    imagenes[imagenActual].classList.add("activa");
+
+}               
