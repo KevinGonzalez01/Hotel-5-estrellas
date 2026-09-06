@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Bacatá | Eventos</title>
+    <link rel="stylesheet" href="gastronomia.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <div class="logo-icon">B</div>
+        <span>HOTEL BACATÁ</span>
+    </div>
+
+    <nav>
+        <a href="#inicio">INICIO</a>
+        <a href="#salones">SALONES</a>
+        <a href="#bodas">BODAS</a>
+        <a href="#empresarial">EMPRESARIAL</a>
+        <a href="#eventos">EVENTOS</a>
+        <a href="#reservas">RESERVAS</a>
+    </nav>
+
+    <div class="redes">
+        <a href="#">◎</a>
+        <a href="#">f</a>
+        <a href="#">▶</a>
+        <a href="#">t</a>
+    </div>
+
+</header>
+
+<section id="inicio" class="hero">
+
+    <img id="fotoEventos" class="foto-fondo" alt="Eventos Hotel Bacatá">
+
+    <div class="selector-imagen">
+        <label for="imagenEventos">
+            📷 Seleccionar imagen
+        </label>
+
+        <input
+            type="file"
+            id="imagenEventos"
+            accept="image/*"
+            onchange="cargarImagen(event, 'fotoEventos')"
+        >
+    </div>
+
+    <div class="hero-contenido">
+
+        <p>HOTEL BACATÁ · EVENTOS · BOGOTÁ</p>
+
+        <h1>
+            MOMENTOS<br>
+            INOLVIDABLES
+        </h1>
+
+        <p class="descripcion">
+            Espacios elegantes para celebrar,
+            reunirse y crear grandes momentos.
+        </p>
+
+        <a href="#reservas" class="boton">
+            COTIZAR EVENTO
+        </a>
+
+    </div>
+
+</section>
+
+<section class="presentacion">
+
+    <p class="subtitulo">EVENTOS BACATÁ</p>
+
+    <h2>CELEBRA CON NOSOTROS</h2>
+
+    <p>
+        En Hotel Bacatá contamos con espacios diseñados
+        para todo tipo de eventos sociales y empresariales
+        en el corazón de Bogotá.
+    </p>
+
+    <p>
+        Nuestro equipo se encarga de cada detalle para que
+        puedas disfrutar de tu evento sin preocupaciones.
+    </p>
+
+</section>
+
+<section id="salones" class="salones">
+
+    <div class="titulo-seccion">
+
+        <p>NUESTROS ESPACIOS</p>
+
+        <h2>SALONES</h2>
+
+    </div>
+
+    <div class="salones-contenedor">
+
+        <article class="salon">
+
+            <div class="salon-imagen">
+
+                <img id="fotoSalonPrincipal" alt="Salón Bacatá">
+
+                <label for="imagenSalonPrincipal">
+                    📷 Seleccionar imagen
+                </label>
+
+                <input
+                    type="file"
+                    id="imagenSalonPrincipal"
+                    accept="image/*"
+                    onchange="cargarImagen(event, 'fotoSalonPrincipal')"
+                >
+
+            </div>
+
+            <div class="salon-info">
+
+                <p class="numero">01</p>
+
+                <h3>SALÓN BACATÁ</h3>
+
+                <p>
+                    Un espacio elegante y amplio para
+                    celebraciones, reuniones y eventos especiales.
+                </p>
+
+                <div class="capacidad">
+                    <span>CAPACIDAD</span>
+                    <strong>Hasta 120 personas</strong>
+                </div>
+
+                <div class="precio">
+                    Desde <strong>$1.800.000 COP</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="salon">
+
+            <div class="salon-imagen">
+
+                <img id="fotoSalonAndino" alt="Salón Andino">
+
+                <label for="imagenSalonAndino">
+                    📷 Seleccionar imagen
+                </label>
+
+                <input
+                    type="file"
+                    id="imagenSalonAndino"
+                    accept="image/*"
+                    onchange="cargarImagen(event, 'fotoSalonAndino')"
+                >
+
+            </div>
+
+            <div class="salon-info">
+
+                <p class="numero">02</p>
+
+                <h3>SALÓN ANDINO</h3>
+
+                <p>
+                    Ideal para conferencias, reuniones
+                    empresariales y presentaciones.
+                </p>
+
+                <div class="capacidad">
+                    <span>CAPACIDAD</span>
+                    <strong>Hasta 80 personas</strong>
+                </div>
+
+                <div class="precio">
+                    Desde <strong>$1.300.000 COP</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="salon">
+
+            <div class="salon-imagen">
+
+                <img id="fotoSalonTerraza" alt="Terraza Bacatá">
+
+                <label for="imagenSalonTerraza">
+                    📷 Seleccionar imagen
+                </label>
+
+                <input
+                    type="file"
+                    id="imagenSalonTerraza"
+                    accept="image/*"
+                    onchange="cargarImagen(event, 'fotoSalonTerraza')"
+                >
+
+            </div>
+
+            <div class="salon-info">
+
+                <p class="numero">03</p>
+
+                <h3>TERRAZA BACATÁ</h3>
+
+                <p>
+                    Un espacio al aire libre para celebraciones,
+                    cenas y eventos sociales.
+                </p>
+
+                <div class="capacidad">
+                    <span>CAPACIDAD</span>
+                    <strong>Hasta 60 personas</strong>
+                </div>
+
+                <div class="precio">
+                    Desde <strong>$950.000 COP</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section id="bodas" class="experiencia">
+
+    <div class="experiencia-imagen">
+
+        <img id="fotoBoda" alt="Boda Hotel Bacatá">
+
+        <label for="imagenBoda">
+            📷 Seleccionar imagen
+        </label>
+
+        <input
+            type="file"
+            id="imagenBoda"
+            accept="image/*"
+            onchange="cargarImagen(event, 'fotoBoda')"
+        >
+
+    </div>
+
+    <div class="experiencia-texto">
+
+        <p class="subtitulo">MOMENTOS ESPECIALES</p>
+
+        <h2>BODAS</h2>
+
+        <p>
+            Haz de tu boda un momento inolvidable.
+            Nuestro equipo se encarga de crear una
+            celebración especial y personalizada.
+        </p>
+
+        <p>
+            Ofrecemos decoración, gastronomía,
+            organización y alojamiento para tus invitados.
+        </p>
+
+        <a href="#reservas" class="boton">
+            PLANEAR MI BODA
+        </a>
+
+    </div>
+
+</section>
+
+<section id="empresarial" class="empresarial">
+
+    <div class="empresarial-texto">
+
+        <p class="subtitulo">EVENTOS CORPORATIVOS</p>
+
+        <h2>EMPRESARIAL</h2>
+
+        <p>
+            Espacios profesionales para reuniones,
+            conferencias, capacitaciones y eventos
+            empresariales.
+        </p>
+
+        <div class="servicios-empresariales">
+
+            <span>✓ Proyector</span>
+            <span>✓ Sonido profesional</span>
+            <span>✓ Wi-Fi</span>
+            <span>✓ Micrófonos</span>
+            <span>✓ Coffee break</span>
+            <span>✓ Servicio de alimentación</span>
+
+        </div>
+
+    </div>
+
+    <div class="empresarial-imagen">
+
+        <img id="fotoEmpresarial" alt="Evento empresarial">
+
+        <label for="imagenEmpresarial">
+            📷 Seleccionar imagen
+        </label>
+
+        <input
+            type="file"
+            id="imagenEmpresarial"
+            accept="image/*"
+            onchange="cargarImagen(event, 'fotoEmpresarial')"
+        >
+
+    </div>
+
+</section>
+
+<section id="eventos" class="tipos-eventos">
+
+    <div class="titulo-seccion">
+
+        <p>HOTEL BACATÁ</p>
+
+        <h2>TIPOS DE EVENTOS</h2>
+
+    </div>
+
+    <div class="eventos-contenedor">
+
+        <article>
+
+            <div class="evento-numero">01</div>
+
+            <h3>BODAS</h3>
+
+            <p>
+                Celebra el día más importante
+                en un espacio elegante y especial.
+            </p>
+
+        </article>
+
+        <article>
+
+            <div class="evento-numero">02</div>
+
+            <h3>CUMPLEAÑOS</h3>
+
+            <p>
+                Fiestas y celebraciones familiares
+                con diferentes opciones de montaje.
+            </p>
+
+        </article>
+
+        <article>
+
+            <div class="evento-numero">03</div>
+
+            <h3>CONFERENCIAS</h3>
+
+            <p>
+                Espacios preparados para reuniones
+                y presentaciones profesionales.
+            </p>
+
+        </article>
+
+        <article>
+
+            <div class="evento-numero">04</div>
+
+            <h3>REUNIONES</h3>
+
+            <p>
+                Ambientes privados para reuniones
+                empresariales y sociales.
+            </p>
+
+        </article>
+
+        <article>
+
+            <div class="evento-numero">05</div>
+
+            <h3>GRADUACIONES</h3>
+
+            <p>
+                Celebra tus logros junto a familiares
+                y amigos.
+            </p>
+
+        </article>
+
+        <article>
+
+            <div class="evento-numero">06</div>
+
+            <h3>CENAS ESPECIALES</h3>
+
+            <p>
+                Una experiencia gastronómica
+                para ocasiones especiales.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section class="paquetes">
+
+    <div class="titulo-seccion">
+
+        <p>EVENTOS BACATÁ</p>
+
+        <h2>PAQUETES</h2>
+
+    </div>
+
+    <div class="paquetes-contenedor">
+
+        <article>
+
+            <h3>ESENCIAL</h3>
+
+            <div class="precio-paquete">
+                $1.500.000
+            </div>
+
+            <p>Salón durante 5 horas</p>
+            <p>Montaje básico</p>
+            <p>Sonido</p>
+            <p>Personal de apoyo</p>
+
+            <a href="#reservas" class="boton">
+                COTIZAR
+            </a>
+
+        </article>
+
+        <article class="destacado">
+
+            <p class="recomendado">MÁS ELEGIDO</p>
+
+            <h3>PREMIUM</h3>
+
+            <div class="precio-paquete">
+                $2.800.000
+            </div>
+
+            <p>Salón durante 7 horas</p>
+            <p>Montaje personalizado</p>
+            <p>Sonido profesional</p>
+            <p>Decoración básica</p>
+            <p>Menú para 30 personas</p>
+
+            <a href="#reservas" class="boton">
+                COTIZAR
+            </a>
+
+        </article>
+
+        <article>
+
+            <h3>EXCLUSIVO</h3>
+
+            <div class="precio-paquete">
+                $4.500.000
+            </div>
+
+            <p>Salón durante 10 horas</p>
+            <p>Decoración personalizada</p>
+            <p>Sonido profesional</p>
+            <p>Menú para 50 personas</p>
+            <p>Coordinador de evento</p>
+
+            <a href="#reservas" class="boton">
+                COTIZAR
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section id="reservas" class="reservas">
+
+    <div class="titulo-seccion">
+
+        <p>HOTEL BACATÁ · BOGOTÁ</p>
+
+        <h2>RESERVA TU EVENTO</h2>
+
+    </div>
+
+    <form>
+
+        <div class="fila">
+
+            <input
+                type="text"
+                placeholder="Nombre completo"
+            >
+
+            <input
+                type="email"
+                placeholder="Correo electrónico"
+            >
+
+        </div>
+
+        <div class="fila">
+
+            <input
+                type="tel"
+                placeholder="Número de teléfono"
+            >
+
+            <input
+                type="date"
+            >
+
+        </div>
+
+        <select>
+
+            <option>Selecciona el tipo de evento</option>
+            <option>Boda</option>
+            <option>Cumpleaños</option>
+            <option>Conferencia</option>
+            <option>Reunión empresarial</option>
+            <option>Graduación</option>
+            <option>Cena especial</option>
+            <option>Otro evento</option>
+
+        </select>
+
+        <select>
+
+            <option>Número aproximado de invitados</option>
+            <option>10 - 20 personas</option>
+            <option>20 - 50 personas</option>
+            <option>50 - 80 personas</option>
+            <option>80 - 120 personas</option>
+            <option>Más de 120 personas</option>
+
+        </select>
+
+        <textarea
+            placeholder="Cuéntanos cómo quieres que sea tu evento"
+        ></textarea>
+
+        <button type="submit">
+            SOLICITAR COTIZACIÓN
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+
+    <div class="footer-contenedor">
+
+        <div class="footer-logo">
+
+            <h2>BACATÁ</h2>
+
+            <p>
+                HOTEL · EVENTOS · BOGOTÁ
+            </p>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>EVENTOS</h3>
+
+            <a href="#salones">Salones</a>
+            <a href="#bodas">Bodas</a>
+            <a href="#empresarial">Empresarial</a>
+            <a href="#eventos">Eventos</a>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>RESERVAS</h3>
+
+            <a href="#reservas">Cotizaciones</a>
+            <a href="#reservas">Reservar salón</a>
+            <a href="#reservas">Bodas</a>
+            <a href="#reservas">Conferencias</a>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>CONTACTO</h3>
+
+            <p>Bogotá D.C., Colombia</p>
+            <p>+57 601 555 2026</p>
+            <p>eventos@hotelbacata.co</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-final">
+
+        <p>
+            © 2026 Hotel Bacatá Bogotá · Todos los derechos reservados
+        </p>
+
+        <p>
+            Política de privacidad · Términos y condiciones
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+
+function cargarImagen(event, idImagen) {
+
+    const archivo = event.target.files[0];
+
+    if (archivo) {
+
+        const imagen = document.getElementById(idImagen);
+
+        imagen.src = URL.createObjectURL(archivo);
+
+        imagen.style.display = "block";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

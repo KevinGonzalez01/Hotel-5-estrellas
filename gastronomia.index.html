@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Bacatá | Restaurante</title>
+    <link rel="stylesheet" href="gastronomia.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div class="logo-icon">B</div>
+        <span>HOTEL BACATÁ</span>
+    </div>
+
+    <nav>
+        <a href="#inicio">INICIO</a>
+        <a href="#hotel">EL HOTEL</a>
+        <a href="#restaurante">RESTAURANTE</a>
+        <a href="#carta">CARTA</a>
+        <a href="#desayuno">DESAYUNO</a>
+        <a href="#reservas">RESERVAS</a>
+        <a href="#contacto">CONTACTO</a>
+    </nav>
+
+    <div class="redes">
+        <a href="#">◎</a>
+        <a href="#">f</a>
+        <a href="#">▶</a>
+        <a href="#">t</a>
+    </div>
+</header>
+
+<section id="inicio" class="hero">
+
+    <div class="selector-imagen">
+         <img src="glassgardensso.jpg">
+        <input type="file" id="imagenHotel" accept="image/*"
+        onchange="cargarImagen(event, 'fotoHotel')">
+    </div>
+
+    <img id="fotoHotel" class="foto-fondo" alt="Hotel Bacatá">
+
+    <div class="hero-contenido">
+        <p>HOTEL BACATÁ · BOGOTÁ</p>
+
+        <h1>
+            SABORES<br>
+            DE COLOMBIA
+        </h1>
+
+        <p class="descripcion">
+            Una experiencia gastronómica colombiana
+            dentro de un hotel pensado para disfrutar.
+        </p>
+
+        <a href="#reservas" class="boton">
+            RESERVAR MESA
+        </a>
+    </div>
+
+</section>
+
+<section id="hotel" class="presentacion">
+
+    <p class="subtitulo">HOTEL BACATÁ</p>
+
+    <h2>UNA EXPERIENCIA ÚNICA</h2>
+
+    <p>
+        Hotel Bacatá es un espacio ubicado en Bogotá donde
+        la comodidad, la gastronomía y la cultura colombiana
+        se encuentran en un solo lugar.
+    </p>
+
+    <p>
+        Nuestro restaurante está abierto tanto para huéspedes
+        como para visitantes que quieran disfrutar de nuestra
+        cocina.
+    </p>
+
+</section>
+
+<section id="restaurante" class="restaurante">
+
+    <div class="restaurante-imagen">
+
+        <img id="fotoRestaurante" alt="Restaurante Bacatá">
+
+        <label for="imagenRestaurante" class="boton-imagen">
+            📷 Seleccionar imagen
+        </label>
+
+        <input type="file" id="imagenRestaurante" accept="image/*"
+        onchange="cargarImagen(event, 'fotoRestaurante')">
+
+    </div>
+
+    <div class="restaurante-texto">
+
+        <p class="subtitulo">BACATÁ RESTAURANTE</p>
+
+        <h2>COCINA COLOMBIANA</h2>
+
+        <p>
+            Nuestra carta combina recetas tradicionales
+            colombianas con una presentación moderna.
+        </p>
+
+        <p>
+            Utilizamos ingredientes de diferentes regiones
+            del país, desde el café de las montañas hasta
+            productos frescos de nuestros mercados locales.
+        </p>
+
+        <a href="#carta" class="boton">
+            VER LA CARTA
+        </a>
+
+    </div>
+
+</section>
+
+<section id="carta" class="carta">
+
+    <div class="titulo-seccion">
+        <p>NUESTRA COCINA</p>
+        <h2>CARTA</h2>
+    </div>
+
+    <div class="carta-contenedor">
+
+        <div class="categoria">
+
+            <h3>ENTRADAS</h3>
+
+            <div class="plato">
+                <div>
+                    <h4>Empanadas Colombianas</h4>
+                    <p>Carne, papa y ají de la casa</p>
+                </div>
+                <strong>$18.000</strong>
+            </div>
+
+            <div class="plato">
+                <div>
+                    <h4>Arepas con Queso</h4>
+                    <p>Arepa de maíz blanco y queso campesino</p>
+                </div>
+                <strong>$15.000</strong>
+            </div>
+
+            <div class="plato">
+                <div>
+                    <h4>Chicharrón Bacatá</h4>
+                    <p>Chicharrón crocante con guacamole</p>
+                </div>
+                <strong>$28.000</strong>
+            </div>
+
+            <div class="plato">
+                <div>
+                    <h4>Patacones con Hogao</h4>
+                    <p>Patacones, hogao y queso costeño</p>
+                </div>
+                <strong>$19.000</strong>
+            </div>
+
+        </div>
+
+        <div class="categoria">
+
+            <h3>PLATOS FUERTES</h3>
+
+            <div class="plato">
+                <div>
+                    <h4>Bandeja Paisa Bacatá</h4>
+                    <p>Carne, chicharrón, frijoles, arroz, huevo, arepa y aguacate</p>
+                </div>
+                <strong>$42.000</strong>
+            </div>
+
+            <div class="plato">
+                <div>
+                    <h4>Ajiaco Santafereño</h4>
+                    <p>Pollo, papa criolla, mazorca, guascas y aguacate</p>
+                </div>
+                <strong>$36.000</strong>
+            </div>
+
+            <div class="plato">
+                <div>
+                    <h4>Sobrebarriga al Horno</h4>
+                    <p>Sobrebarriga, papa criolla y ensalada</p>
+                </div>
+                <strong>$45.000</strong>
+            </div>
+
+            <div class="plato">
+                <div>
+                    <h4>Pescado Caribeño</h4>
+                    <p>Pescado fresco, arroz con coco y patacones</p>
+                </div>
+                <strong>$48.000</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="especial">
+
+    <div class="especial-imagen">
+
+        <img id="fotoEspecial" alt="Plato especial">
+
+        <label for="imagenEspecial" class="boton-imagen">
+            📷 Seleccionar imagen
+        </label>
+
+        <input type="file" id="imagenEspecial" accept="image/*"
+        onchange="cargarImagen(event, 'fotoEspecial')">
+
+    </div>
+
+    <div class="especial-contenido">
+
+        <p class="subtitulo">ESPECIAL DE LA CASA</p>
+
+        <h2>HAMBURGUESA<br>BACATÁ</h2>
+
+        <p>
+            Carne de res, queso campesino, tocineta,
+            cebolla caramelizada, lechuga, tomate y
+            salsa de la casa.
+        </p>
+
+        <span>$39.000 COP</span>
+
+        <br><br>
+
+        <a href="#reservas" class="boton">
+            RESERVAR MESA
+        </a>
+
+    </div>
+
+</section>
+
+<section id="desayuno" class="desayuno">
+
+    <div class="titulo-seccion">
+        <p>PARA NUESTROS HUÉSPEDES</p>
+        <h2>DESAYUNO</h2>
+    </div>
+
+    <div class="desayuno-contenedor">
+
+        <article>
+            <h3>DESAYUNO COLOMBIANO</h3>
+
+            <p>
+                Huevos al gusto, arepa con queso,
+                chocolate caliente, fruta y café colombiano.
+            </p>
+
+            <strong>$28.000</strong>
+        </article>
+
+        <article>
+            <h3>DESAYUNO AMERICANO</h3>
+
+            <p>
+                Huevos, tocineta, pan artesanal,
+                fruta, jugo natural y café.
+            </p>
+
+            <strong>$32.000</strong>
+        </article>
+
+        <article>
+            <h3>DESAYUNO BACATÁ</h3>
+
+            <p>
+                Huevos, arepa, chorizo, queso campesino,
+                fruta, jugo y café colombiano.
+            </p>
+
+            <strong>$35.000</strong>
+        </article>
+
+    </div>
+
+</section>
+
+<section class="bebidas">
+
+    <div class="bebidas-texto">
+
+        <p class="subtitulo">CAFÉ COLOMBIANO</p>
+
+        <h2>BEBIDAS</h2>
+
+        <div class="bebida">
+            <span>Café Americano</span>
+            <strong>$7.000</strong>
+        </div>
+
+        <div class="bebida">
+            <span>Capuchino</span>
+            <strong>$10.000</strong>
+        </div>
+
+        <div class="bebida">
+            <span>Chocolate Caliente</span>
+            <strong>$9.000</strong>
+        </div>
+
+        <div class="bebida">
+            <span>Jugo Natural</span>
+            <strong>$9.000</strong>
+        </div>
+
+        <div class="bebida">
+            <span>Limonada Natural</span>
+            <strong>$8.000</strong>
+        </div>
+
+        <div class="bebida">
+            <span>Agua</span>
+            <strong>$5.000</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="reservas" class="reservas">
+
+    <div class="titulo-seccion">
+        <p>HOTEL BACATÁ · BOGOTÁ</p>
+        <h2>HAZ TU RESERVA</h2>
+    </div>
+
+    <form>
+
+        <div class="fila">
+            <input type="text" placeholder="Nombre completo">
+            <input type="email" placeholder="Correo electrónico">
+        </div>
+
+        <div class="fila">
+            <input type="date">
+            <input type="time">
+        </div>
+
+        <select>
+            <option>Número de personas</option>
+            <option>1 persona</option>
+            <option>2 personas</option>
+            <option>3 personas</option>
+            <option>4 personas</option>
+            <option>5 personas</option>
+            <option>6 personas</option>
+            <option>Más de 6 personas</option>
+        </select>
+
+        <textarea placeholder="Solicitud especial"></textarea>
+
+        <button type="submit">
+            CONFIRMAR RESERVA
+        </button>
+
+    </form>
+
+</section>
+
+<section class="hotel-servicios">
+
+    <div>
+        <p class="subtitulo">HOTEL BACATÁ</p>
+
+        <h2>MÁS QUE UN RESTAURANTE</h2>
+
+        <p>
+            Hospédate con nosotros y disfruta de una
+            experiencia completa en Bogotá.
+        </p>
+
+        <a href="#contacto" class="boton">
+            CONOCER EL HOTEL
+        </a>
+    </div>
+
+    <div class="servicios">
+
+        <article>
+            <h3>HABITACIONES</h3>
+            <p>
+                Habitaciones cómodas y modernas
+                para descansar después de conocer Bogotá.
+            </p>
+        </article>
+
+        <article>
+            <h3>RESTAURANTE</h3>
+            <p>
+                Cocina colombiana disponible para
+                huéspedes y visitantes.
+            </p>
+        </article>
+
+        <article>
+            <h3>TERRAZA</h3>
+            <p>
+                Espacio para disfrutar bebidas,
+                café y atardeceres en la ciudad.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+<section id="contacto" class="contacto">
+
+    <div class="contacto-info">
+
+        <p class="subtitulo">VISÍTANOS</p>
+
+        <h2>CONTACTO</h2>
+
+        <p>
+            Hotel Bacatá Bogotá<br>
+            Calle 19 # 5-20<br>
+            Bogotá D.C., Colombia
+        </p>
+
+        <p>
+            Teléfono: +57 601 555 2026<br>
+            WhatsApp: +57 300 555 2026
+        </p>
+
+        <p>
+            restaurante@hotelbacata.co
+        </p>
+
+        <p>
+            Restaurante: 6:00 a.m. - 11:00 p.m.
+        </p>
+
+    </div>
+
+    <div class="mapa">
+
+        <img id="fotoBogota" alt="Bogotá Colombia">
+
+        <label for="imagenBogota" class="boton-imagen">
+            📷 Seleccionar imagen
+        </label>
+
+        <input type="file" id="imagenBogota" accept="image/*"
+        onchange="cargarImagen(event, 'fotoBogota')">
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="footer-contenedor">
+
+        <div class="footer-logo">
+            <h2>BACATÁ</h2>
+            <p>HOTEL · RESTAURANTE · BOGOTÁ</p>
+        </div>
+
+        <div class="footer-columna">
+            <h3>HOTEL</h3>
+            <a href="#hotel">El Hotel</a>
+            <a href="#">Habitaciones</a>
+            <a href="#">Servicios</a>
+            <a href="#">Eventos</a>
+        </div>
+
+        <div class="footer-columna">
+            <h3>RESTAURANTE</h3>
+            <a href="#carta">Carta</a>
+            <a href="#desayuno">Desayunos</a>
+            <a href="#reservas">Reservas</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+
+        <div class="footer-columna">
+            <h3>SÍGUENOS</h3>
+
+            <div class="footer-redes">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-final">
+        <p>© 2026 Hotel Bacatá Bogotá · Todos los derechos reservados</p>
+        <p>Política de privacidad · Términos y condiciones</p>
+    </div>
+
+</footer>
+
+<script>
+function cargarImagen(event, idImagen) {
+    const archivo = event.target.files[0];
+
+    if (archivo) {
+        const imagen = document.getElementById(idImagen);
+        imagen.src = URL.createObjectURL(archivo);
+        imagen.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Bacatá | Promociones</title>
+    <link rel="stylesheet" href="gastronomia.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <div class="logo-icon">B</div>
+        <span>HOTEL BACATÁ</span>
+    </div>
+
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="bienestar.html">BIENESTAR</a>
+        <a href="eventos.html">EVENTOS</a>
+        <a href="#promociones">PROMOCIONES</a>
+        <a href="#contacto">CONTACTO</a>
+    </nav>
+
+    <div class="redes">
+        <a href="#">◎</a>
+        <a href="#">f</a>
+        <a href="#">▶</a>
+    </div>
+
+</header>
+
+<section class="hero">
+
+    <img id="fotoPromociones" alt="Promociones Hotel Bacatá">
+
+    <div class="selector-imagen">
+
+        <label for="imagenPromociones">
+            📷 Seleccionar imagen
+        </label>
+
+        <input
+            type="file"
+            id="imagenPromociones"
+            accept="image/*"
+            onchange="cargarImagen(event, 'fotoPromociones')"
+        >
+
+    </div>
+
+    <div class="hero-contenido">
+
+        <p>HOTEL BACATÁ · BOGOTÁ</p>
+
+        <h1>
+            PROMOCIONES
+        </h1>
+
+        <p>
+            Experiencias especiales a precios especiales.
+        </p>
+
+        <a href="#promociones" class="boton">
+            VER PROMOCIONES
+        </a>
+
+    </div>
+
+</section>
+
+<section class="introduccion">
+
+    <p class="subtitulo">OFERTAS BACATÁ</p>
+
+    <h2>VIVE MÁS, PAGA MENOS</h2>
+
+    <p>
+        Descubre nuestras promociones y disfruta de
+        habitaciones, gastronomía, bienestar y experiencias
+        especiales durante tu estadía en Bogotá.
+    </p>
+
+</section>
+
+<section id="promociones" class="promociones">
+
+    <div class="titulo-seccion">
+
+        <p>OFERTAS ESPECIALES</p>
+
+        <h2>PROMOCIONES</h2>
+
+    </div>
+
+    <div class="promociones-contenedor">
+
+        <article class="promocion">
+
+            <div class="promocion-imagen">
+
+                <img id="fotoHabitacion" alt="Habitación Hotel Bacatá">
+
+                <label for="imagenHabitacion">
+                    📷 Seleccionar imagen
+                </label>
+
+                <input
+                    type="file"
+                    id="imagenHabitacion"
+                    accept="image/*"
+                    onchange="cargarImagen(event, 'fotoHabitacion')"
+                >
+
+                <span class="descuento">
+                    -25%
+                </span>
+
+            </div>
+
+            <div class="promocion-contenido">
+
+                <p class="categoria">ALOJAMIENTO</p>
+
+                <h3>ESCAPADA BACATÁ</h3>
+
+                <p>
+                    Disfruta de una noche en una de nuestras
+                    habitaciones con desayuno incluido.
+                </p>
+
+                <div class="precios">
+
+                    <span class="precio-anterior">
+                        $480.000 COP
+                    </span>
+
+                    <strong>
+                        $360.000 COP
+                    </strong>
+
+                </div>
+
+                <a href="#reservar" class="boton">
+                    RESERVAR
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="promocion">
+
+            <div class="promocion-imagen">
+
+                <img id="fotoSpa" alt="Spa Hotel Bacatá">
+
+                <label for="imagenSpa">
+                    📷 Seleccionar imagen
+                </label>
+
+                <input
+                    type="file"
+                    id="imagenSpa"
+                    accept="image/*"
+                    onchange="cargarImagen(event, 'fotoSpa')"
+                >
+
+                <span class="descuento">
+                    -20%
+                </span>
+
+            </div>
+
+            <div class="promocion-contenido">
+
+                <p class="categoria">BIENESTAR</p>
+
+                <h3>DÍA DE SPA</h3>
+
+                <p>
+                    Disfruta de una experiencia de relajación
+                    con masaje, jacuzzi y zona de descanso.
+                </p>
+
+                <div class="precios">
+
+                    <span class="precio-anterior">
+                        $180.000 COP
+                    </span>
+
+                    <strong>
+                        $144.000 COP
+                    </strong>
+
+                </div>
+
+                <a href="#reservar" class="boton">
+                    RESERVAR
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="promocion">
+
+            <div class="promocion-imagen">
+
+                <img id="fotoRestaurante" alt="Restaurante Hotel Bacatá">
+
+                <label for="imagenRestaurante">
+                    📷 Seleccionar imagen
+                </label>
+
+                <input
+                    type="file"
+                    id="imagenRestaurante"
+                    accept="image/*"
+                    onchange="cargarImagen(event, 'fotoRestaurante')"
+                >
+
+                <span class="descuento">
+                    -15%
+                </span>
+
+            </div>
+
+            <div class="promocion-contenido">
+
+                <p class="categoria">GASTRONOMÍA</p>
+
+                <h3>CENA PARA DOS</h3>
+
+                <p>
+                    Cena especial para dos personas con
+                    entrada, plato principal y postre.
+                </p>
+
+                <div class="precios">
+
+                    <span class="precio-anterior">
+                        $160.000 COP
+                    </span>
+
+                    <strong>
+                        $136.000 COP
+                    </strong>
+
+                </div>
+
+                <a href="#reservar" class="boton">
+                    RESERVAR
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="promocion">
+
+            <div class="promocion-imagen">
+
+                <img id="fotoFinSemana" alt="Fin de semana Hotel Bacatá">
+
+                <label for="imagenFinSemana">
+                    📷 Seleccionar imagen
+                </label>
+
+                <input
+                    type="file"
+                    id="imagenFinSemana"
+                    accept="image/*"
+                    onchange="cargarImagen(event, 'fotoFinSemana')"
+                >
+
+                <span class="descuento">
+                    -30%
+                </span>
+
+            </div>
+
+            <div class="promocion-contenido">
+
+                <p class="categoria">FIN DE SEMANA</p>
+
+                <h3>PLAN FIN DE SEMANA</h3>
+
+                <p>
+                    Dos noches de alojamiento, desayuno
+                    y acceso a las zonas de bienestar.
+                </p>
+
+                <div class="precios">
+
+                    <span class="precio-anterior">
+                        $900.000 COP
+                    </span>
+
+                    <strong>
+                        $630.000 COP
+                    </strong>
+
+                </div>
+
+                <a href="#reservar" class="boton">
+                    RESERVAR
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="promocion">
+
+            <div class="promocion-imagen">
+
+                <img id="fotoFamilia" alt="Plan familiar Hotel Bacatá">
+
+                <label for="imagenFamilia">
+                    📷 Seleccionar imagen
+                </label>
+
+                <input
+                    type="file"
+                    id="imagenFamilia"
+                    accept="image/*"
+                    onchange="cargarImagen(event, 'fotoFamilia')"
+                >
+
+                <span class="descuento">
+                    -20%
+                </span>
+
+            </div>
+
+            <div class="promocion-contenido">
+
+                <p class="categoria">FAMILIAR</p>
+
+                <h3>PLAN FAMILIAR</h3>
+
+                <p>
+                    Alojamiento para la familia con desayuno
+                    incluido y una cena especial.
+                </p>
+
+                <div class="precios">
+
+                    <span class="precio-anterior">
+                        $750.000 COP
+                    </span>
+
+                    <strong>
+                        $600.000 COP
+                    </strong>
+
+                </div>
+
+                <a href="#reservar" class="boton">
+                    RESERVAR
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="promocion">
+
+            <div class="promocion-imagen">
+
+                <img id="fotoRomantico" alt="Plan romántico Hotel Bacatá">
+
+                <label for="imagenRomantico">
+                    📷 Seleccionar imagen
+                </label>
+
+                <input
+                    type="file"
+                    id="imagenRomantico"
+                    accept="image/*"
+                    onchange="cargarImagen(event, 'fotoRomantico')"
+                >
+
+                <span class="descuento">
+                    -25%
+                </span>
+
+            </div>
+
+            <div class="promocion-contenido">
+
+                <p class="categoria">ROMÁNTICO</p>
+
+                <h3>ESCAPADA PARA DOS</h3>
+
+                <p>
+                    Una noche especial con desayuno, cena
+                    romántica y acceso al spa.
+                </p>
+
+                <div class="precios">
+
+                    <span class="precio-anterior">
+                        $650.000 COP
+                    </span>
+
+                    <strong>
+                        $487.500 COP
+                    </strong>
+
+                </div>
+
+                <a href="#reservar" class="boton">
+                    RESERVAR
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section class="especial">
+
+    <div class="especial-texto">
+
+        <p class="subtitulo">PROMOCIÓN DEL MES</p>
+
+        <h2>EXPERIENCIA BACATÁ</h2>
+
+        <p>
+            Hospédate, relájate y disfruta de nuestra
+            gastronomía con un paquete diseñado para
+            vivir una experiencia completa.
+        </p>
+
+        <div class="incluye">
+
+            <span>✓ Una noche de alojamiento</span>
+            <span>✓ Desayuno para dos</span>
+            <span>✓ Cena especial</span>
+            <span>✓ Acceso al spa</span>
+            <span>✓ Acceso a piscina</span>
+
+        </div>
+
+        <div class="precio-especial">
+
+            <span>Antes $850.000 COP</span>
+
+            <strong>$680.000 COP</strong>
+
+        </div>
+
+        <a href="#reservar" class="boton">
+            QUIERO ESTA PROMOCIÓN
+        </a>
+
+    </div>
+
+    <div class="especial-imagen">
+
+        <img id="fotoEspecial" alt="Experiencia Bacatá">
+
+        <label for="imagenEspecial">
+            📷 Seleccionar imagen
+        </label>
+
+        <input
+            type="file"
+            id="imagenEspecial"
+            accept="image/*"
+            onchange="cargarImagen(event, 'fotoEspecial')"
+        >
+
+    </div>
+
+</section>
+
+<section class="beneficios">
+
+    <div class="titulo-seccion">
+
+        <p>HOTEL BACATÁ</p>
+
+        <h2>BENEFICIOS</h2>
+
+    </div>
+
+    <div class="beneficios-contenedor">
+
+        <article>
+
+            <span>01</span>
+
+            <h3>MEJORES PRECIOS</h3>
+
+            <p>
+                Encuentra tarifas especiales
+                durante todo el año.
+            </p>
+
+        </article>
+
+        <article>
+
+            <span>02</span>
+
+            <h3>DESAYUNO</h3>
+
+            <p>
+                Algunas promociones incluyen
+                desayuno para nuestros huéspedes.
+            </p>
+
+        </article>
+
+        <article>
+
+            <span>03</span>
+
+            <h3>BIENESTAR</h3>
+
+            <p>
+                Accede a diferentes experiencias
+                de relajación y bienestar.
+            </p>
+
+        </article>
+
+        <article>
+
+            <span>04</span>
+
+            <h3>EXPERIENCIAS</h3>
+
+            <p>
+                Combina alojamiento, gastronomía
+                y entretenimiento.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section id="reservar" class="reservas">
+
+    <div class="titulo-seccion">
+
+        <p>HOTEL BACATÁ · BOGOTÁ</p>
+
+        <h2>RESERVA TU PROMOCIÓN</h2>
+
+    </div>
+
+    <form>
+
+        <div class="fila">
+
+            <input
+                type="text"
+                placeholder="Nombre completo"
+            >
+
+            <input
+                type="email"
+                placeholder="Correo electrónico"
+            >
+
+        </div>
+
+        <div class="fila">
+
+            <input
+                type="tel"
+                placeholder="Número de teléfono"
+            >
+
+            <input
+                type="date"
+            >
+
+        </div>
+
+        <select>
+
+            <option>Selecciona una promoción</option>
+            <option>Escapada Bacatá</option>
+            <option>Día de Spa</option>
+            <option>Cena para dos</option>
+            <option>Plan Fin de Semana</option>
+            <option>Plan Familiar</option>
+            <option>Escapada para dos</option>
+            <option>Experiencia Bacatá</option>
+
+        </select>
+
+        <input
+            type="number"
+            placeholder="Número de personas"
+        >
+
+        <textarea
+            placeholder="Mensaje o solicitud especial"
+        ></textarea>
+
+        <button type="submit">
+            SOLICITAR RESERVA
+        </button>
+
+    </form>
+
+</section>
+
+<footer id="contacto">
+
+    <div class="footer-contenedor">
+
+        <div class="footer-logo">
+
+            <h2>BACATÁ</h2>
+
+            <p>
+                HOTEL · EXPERIENCIAS · BOGOTÁ
+            </p>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>HOTEL</h3>
+
+            <a href="index.html">Inicio</a>
+            <a href="bienestar.html">Bienestar</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="#promociones">Promociones</a>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>OFERTAS</h3>
+
+            <a href="#promociones">Habitaciones</a>
+            <a href="#promociones">Spa</a>
+            <a href="#promociones">Restaurante</a>
+            <a href="#promociones">Familia</a>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>CONTACTO</h3>
+
+            <p>Bogotá D.C., Colombia</p>
+            <p>+57 601 555 2026</p>
+            <p>reservas@hotelbacata.co</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-final">
+
+        <p>
+            © 2026 Hotel Bacatá Bogotá
+        </p>
+
+        <p>
+            Política de privacidad · Términos y condiciones
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+
+function cargarImagen(event, idImagen) {
+
+    const archivo = event.target.files[0];
+
+    if (archivo) {
+
+        const imagen = document.getElementById(idImagen);
+
+        imagen.src = URL.createObjectURL(archivo);
+
+        imagen.style.display = "block";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

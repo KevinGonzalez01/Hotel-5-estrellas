@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Bacatá | Bienestar</title>
+    <link rel="stylesheet" href="gastronomia.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div class="logo-icon">B</div>
+        <span>HOTEL BACATÁ</span>
+    </div>
+
+    <nav>
+        <a href="#inicio">INICIO</a>
+        <a href="#piscina">PISCINA</a>
+        <a href="#spa">SPA</a>
+        <a href="#gimnasio">GIMNASIO</a>
+        <a href="#servicios">SERVICIOS</a>
+        <a href="#reservas">RESERVAS</a>
+    </nav>
+
+    <div class="redes">
+        <a href="#">◎</a>
+        <a href="#">f</a>
+        <a href="#">▶</a>
+        <a href="#">t</a>
+    </div>
+</header>
+
+<section id="inicio" class="hero">
+
+    <img id="fotoBienestar" class="foto-fondo" alt="Bienestar Hotel Bacatá">
+
+    <div class="selector-imagen">
+        <label for="imagenBienestar">
+            📷 Seleccionar imagen
+        </label>
+
+        <input
+            type="file"
+            id="imagenBienestar"
+            accept="image/*"
+            onchange="cargarImagen(event, 'fotoBienestar')"
+        >
+    </div>
+
+    <div class="hero-contenido">
+
+        <p>HOTEL BACATÁ · BIENESTAR</p>
+
+        <h1>
+            DESCANSO<br>
+            Y BIENESTAR
+        </h1>
+
+        <p class="descripcion">
+            Un espacio diseñado para relajarte,
+            desconectarte y disfrutar de tu estadía.
+        </p>
+
+        <a href="#servicios" class="boton">
+            DESCUBRIR EXPERIENCIA
+        </a>
+
+    </div>
+
+</section>
+
+<section class="presentacion">
+
+    <p class="subtitulo">HOTEL BACATÁ</p>
+
+    <h2>UN MOMENTO PARA TI</h2>
+
+    <p>
+        En nuestra zona de bienestar encontrarás espacios
+        diseñados para descansar el cuerpo y renovar la mente.
+    </p>
+
+    <p>
+        Disfruta de nuestras instalaciones durante tu estadía
+        y vive una experiencia de tranquilidad en Bogotá.
+    </p>
+
+</section>
+
+<section id="piscina" class="servicio-grande">
+
+    <div class="servicio-imagen">
+
+        <img id="fotoPiscina" alt="Piscina Hotel Bacatá">
+
+        <label for="imagenPiscina" class="boton-imagen">
+            📷 Seleccionar imagen
+        </label>
+
+        <input
+            type="file"
+            id="imagenPiscina"
+            accept="image/*"
+            onchange="cargarImagen(event, 'fotoPiscina')"
+        >
+
+    </div>
+
+    <div class="servicio-texto">
+
+        <p class="subtitulo">RELÁJATE</p>
+
+        <h2>PISCINA</h2>
+
+        <p>
+            Disfruta de nuestra piscina en un ambiente tranquilo
+            y elegante, perfecto para descansar después de un
+            día explorando Bogotá.
+        </p>
+
+        <p>
+            Un espacio pensado para compartir, relajarse y
+            disfrutar de momentos especiales.
+        </p>
+
+        <div class="datos">
+            <span>HORARIO</span>
+            <strong>6:00 A.M. - 9:00 P.M.</strong>
+        </div>
+
+        <div class="datos">
+            <span>ACCESO</span>
+            <strong>HUÉSPEDES DEL HOTEL</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="spa" class="servicio-grande invertido">
+
+    <div class="servicio-texto">
+
+        <p class="subtitulo">RELAX TOTAL</p>
+
+        <h2>SPA BACATÁ</h2>
+
+        <p>
+            Nuestro spa ofrece un ambiente tranquilo donde
+            podrás olvidarte del estrés y disfrutar de diferentes
+            tratamientos de relajación.
+        </p>
+
+        <p>
+            Déjate llevar por una experiencia pensada para
+            recuperar tu energía y sentirte renovado.
+        </p>
+
+        <a href="#reservas" class="boton">
+            RESERVAR TRATAMIENTO
+        </a>
+
+    </div>
+
+    <div class="servicio-imagen">
+
+        <img id="fotoSpa" alt="Spa Hotel Bacatá">
+
+        <label for="imagenSpa" class="boton-imagen">
+            📷 Seleccionar imagen
+        </label>
+
+        <input
+            type="file"
+            id="imagenSpa"
+            accept="image/*"
+            onchange="cargarImagen(event, 'fotoSpa')"
+        >
+
+    </div>
+
+</section>
+
+<section class="tratamientos">
+
+    <div class="titulo-seccion">
+
+        <p>SPA BACATÁ</p>
+
+        <h2>TRATAMIENTOS</h2>
+
+    </div>
+
+    <div class="tratamientos-contenedor">
+
+        <article>
+
+            <div class="icono">01</div>
+
+            <h3>MASAJE RELAJANTE</h3>
+
+            <p>
+                Masaje corporal diseñado para liberar
+                tensión y brindar una sensación profunda
+                de relajación.
+            </p>
+
+            <strong>$90.000 COP</strong>
+
+        </article>
+
+        <article>
+
+            <div class="icono">02</div>
+
+            <h3>MASAJE DESCONTRACTURANTE</h3>
+
+            <p>
+                Tratamiento enfocado en reducir la tensión
+                muscular y mejorar la sensación de bienestar.
+            </p>
+
+            <strong>$110.000 COP</strong>
+
+        </article>
+
+        <article>
+
+            <div class="icono">03</div>
+
+            <h3>EXPERIENCIA SPA</h3>
+
+            <p>
+                Acceso a zonas de relajación acompañado
+                de una experiencia de descanso completa.
+            </p>
+
+            <strong>$130.000 COP</strong>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section class="zonas">
+
+    <div class="titulo-seccion">
+
+        <p>BIENESTAR BACATÁ</p>
+
+        <h2>NUESTRAS ZONAS</h2>
+
+    </div>
+
+    <div class="zonas-contenedor">
+
+        <article>
+
+            <div class="zona-numero">01</div>
+
+            <h3>SAUNA</h3>
+
+            <p>
+                Un espacio cálido para relajarte y
+                desconectarte de la rutina.
+            </p>
+
+        </article>
+
+        <article>
+
+            <div class="zona-numero">02</div>
+
+            <h3>JACUZZI</h3>
+
+            <p>
+                Disfruta de un momento de descanso
+                en nuestra zona de hidromasaje.
+            </p>
+
+        </article>
+
+        <article>
+
+            <div class="zona-numero">03</div>
+
+            <h3>BAÑO TURCO</h3>
+
+            <p>
+                Un ambiente de vapor pensado para
+                complementar tu experiencia de relajación.
+            </p>
+
+        </article>
+
+        <article>
+
+            <div class="zona-numero">04</div>
+
+            <h3>ZONA DE DESCANSO</h3>
+
+            <p>
+                Espacio tranquilo para descansar antes
+                o después de tus tratamientos.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section id="gimnasio" class="gimnasio">
+
+    <div class="gimnasio-imagen">
+
+        <img id="fotoGimnasio" alt="Gimnasio Hotel Bacatá">
+
+        <label for="imagenGimnasio" class="boton-imagen">
+            📷 Seleccionar imagen
+        </label>
+
+        <input
+            type="file"
+            id="imagenGimnasio"
+            accept="image/*"
+            onchange="cargarImagen(event, 'fotoGimnasio')"
+        >
+
+    </div>
+
+    <div class="gimnasio-texto">
+
+        <p class="subtitulo">MANTENTE ACTIVO</p>
+
+        <h2>GIMNASIO</h2>
+
+        <p>
+            Mantén tu rutina durante tu estadía con equipos
+            diseñados para realizar diferentes tipos de entrenamiento.
+        </p>
+
+        <div class="lista">
+
+            <span>● Equipos cardiovasculares</span>
+            <span>● Zona de pesas</span>
+            <span>● Máquinas de entrenamiento</span>
+            <span>● Área de estiramiento</span>
+
+        </div>
+
+        <div class="datos">
+            <span>HORARIO</span>
+            <strong>5:00 A.M. - 10:00 P.M.</strong>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="servicios" class="experiencias">
+
+    <div class="titulo-seccion">
+
+        <p>HOTEL BACATÁ</p>
+
+        <h2>EXPERIENCIAS</h2>
+
+    </div>
+
+    <div class="experiencias-contenedor">
+
+        <article>
+
+            <h3>YOGA</h3>
+
+            <p>
+                Sesiones de relajación y estiramiento
+                para comenzar el día.
+            </p>
+
+        </article>
+
+        <article>
+
+            <h3>MEDITACIÓN</h3>
+
+            <p>
+                Espacios de tranquilidad para encontrar
+                equilibrio y concentración.
+            </p>
+
+        </article>
+
+        <article>
+
+            <h3>RUTINAS FITNESS</h3>
+
+            <p>
+                Actividades físicas para mantenerte
+                activo durante tu estadía.
+            </p>
+
+        </article>
+
+        <article>
+
+            <h3>RELAX</h3>
+
+            <p>
+                Momentos especiales para descansar
+                y desconectarte de la rutina.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section id="reservas" class="reservas">
+
+    <div class="titulo-seccion">
+
+        <p>HOTEL BACATÁ · BIENESTAR</p>
+
+        <h2>RESERVA TU EXPERIENCIA</h2>
+
+    </div>
+
+    <form>
+
+        <div class="fila">
+
+            <input
+                type="text"
+                placeholder="Nombre completo"
+            >
+
+            <input
+                type="email"
+                placeholder="Correo electrónico"
+            >
+
+        </div>
+
+        <div class="fila">
+
+            <input type="date">
+
+            <input type="time">
+
+        </div>
+
+        <select>
+
+            <option>Selecciona un servicio</option>
+            <option>Piscina</option>
+            <option>Spa</option>
+            <option>Masaje relajante</option>
+            <option>Masaje descontracturante</option>
+            <option>Experiencia Spa</option>
+            <option>Sauna</option>
+            <option>Jacuzzi</option>
+            <option>Baño turco</option>
+            <option>Gimnasio</option>
+
+        </select>
+
+        <textarea
+            placeholder="Solicitud especial"
+        ></textarea>
+
+        <button type="submit">
+            RESERVAR EXPERIENCIA
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+
+    <div class="footer-contenedor">
+
+        <div class="footer-logo">
+
+            <h2>BACATÁ</h2>
+
+            <p>
+                HOTEL · BIENESTAR · BOGOTÁ
+            </p>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>BIENESTAR</h3>
+
+            <a href="#piscina">Piscina</a>
+            <a href="#spa">Spa</a>
+            <a href="#gimnasio">Gimnasio</a>
+            <a href="#servicios">Servicios</a>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>EXPERIENCIAS</h3>
+
+            <a href="#">Yoga</a>
+            <a href="#">Meditación</a>
+            <a href="#">Masajes</a>
+            <a href="#">Relax</a>
+
+        </div>
+
+        <div class="footer-columna">
+
+            <h3>CONTACTO</h3>
+
+            <p>Bogotá D.C., Colombia</p>
+            <p>+57 601 555 2026</p>
+            <p>bienestar@hotelbacata.co</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-final">
+
+        <p>
+            © 2026 Hotel Bacatá Bogotá · Todos los derechos reservados
+        </p>
+
+        <p>
+            Política de privacidad · Términos y condiciones
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+
+function cargarImagen(event, idImagen) {
+
+    const archivo = event.target.files[0];
+
+    if (archivo) {
+
+        const imagen = document.getElementById(idImagen);
+
+        imagen.src = URL.createObjectURL(archivo);
+
+        imagen.style.display = "block";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
