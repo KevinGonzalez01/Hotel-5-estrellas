@@ -26,151 +26,396 @@
 
 </head>
 
-<style>
-    html {
-        min-height: 100%;
-        background-image: url("../IMG/Fondo\ Habitaciones.avif");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-
-    body {
-        background: transparent;
-    }
-</style>
-
 <body>
 
-    <div class="mea-culpa-regular">Bacatá Crown</div>
+    <!--PARTE PRINCIPAL: SLIDER + MENU + FORMULARIO (igual que en Index)-->
 
-     <nav>
+    <section class="hero">
 
-        <ul>
+        <!-- SLIDER -->
+        <div class="slider">
 
-            <li><a href="Index.html">Inicio</a></li>
+            <div class="slides">
 
-            <li><a href="Habitaciones.html">Habitaciones</a></li>
+                <img src="../IMG/cROWN.png"
+                    alt="Habitación sencilla">
 
-            <li><a href="Oasis.html">Oasis</a></li>
+            </div>
 
-            <li><a href="Galeria y Opiniones.html">Galería y opiniones</a></li>
+        </div>
 
-            <li><a href="Eventos.html">Eventos</a></li>
 
-            <li><a href="Restaurante.html">Restaurante</a></li>
+<!-- MENU -->
+<nav>
 
-            <li><a href="Promociones.html">Promociones</a></li>
+    <!-- LOGO -->
+    <div class="logo">
+        Bacatá Crown
+    </div>
 
-            <li><a href="Index.html#contacto">Contacto</a></li>
+    <ul>
 
-            <li><a href="Portal de clientes.html"><i class="fa-solid fa-circle-user"></i></i></a></li>
+        <li>
+            <a href="Index.html">Inicio</a>
+        </li>
 
-        </ul>
+        <li>
+            <a href="Habitaciones.html">Habitaciones</a>
+        </li>
 
-    </nav>
+        <!-- OASIS -->
+        <li class="dropdown">
+            <a href="biniestar.index.html">Oasis ▾</a>
+
+            <ul class="submenu-items">
+                <li><a href="biniestar.index.html#piscina">PISCINA</a></li>
+                <li><a href="biniestar.index.html#spa">SPA</a></li>
+                <li><a href="biniestar.index.html#gimnasio">GIMNASIO</a></li>
+                <li><a href="biniestar.index.html#servicios">SERVICIOS</a></li>
+                <li><a href="biniestar.index.html#reservas">RESERVAS</a></li>
+            </ul>
+        </li>
+
+        <!-- GALERÍA -->
+        <li class="dropdown">
+            <a href="galeria.html">Galería y opiniones ▾</a>
+
+<ul class="submenu-items">
+    <li><a href="galeria.html#galeria">GALERÍA</a></li>
+    <li><a href="galeria.html#opiniones">OPINIONES</a></li>
+</ul>
+        </li>
+
+        <!-- EVENTOS -->
+        <li class="dropdown">
+            <a href="eventos.index.html">Eventos ▾</a>
+
+            <ul class="submenu-items">
+                <li><a href="eventos.index.html#salones">SALONES</a></li>
+                <li><a href="eventos.index.html#bodas">BODAS</a></li>
+                <li><a href="eventos.index.html#empresarial">EMPRESARIAL</a></li>
+                <li><a href="eventos.index.html#eventos">EVENTOS</a></li>
+                <li><a href="eventos.index.html#reservas">RESERVAS</a></li>
+            </ul>
+        </li>
+
+        <!-- RESTAURANTE -->
+        <li class="dropdown">
+            <a href="gastronomia.index.html">Restaurante ▾</a>
+
+            <ul class="submenu-items">
+                <li><a href="gastronomia.index.html#hotel">EL HOTEL</a></li>
+                <li><a href="gastronomia.index.html#restaurante">RESTAURANTE</a></li>
+                <li><a href="gastronomia.index.html#carta">CARTA</a></li>
+                <li><a href="gastronomia.index.html#desayuno">DESAYUNO</a></li>
+                <li><a href="gastronomia.index.html#reservas">RESERVAS</a></li>
+                <li><a href="gastronomia.index.html#contacto">CONTACTO</a></li>
+            </ul>
+        </li>
+
+        <!-- PROMOCIONES -->
+        <li class="dropdown">
+            <a href="promociones.html">Promociones </a>
+        </li>
+
+        <!-- CONTACTO -->
+        <li>
+            <a href="index.html#contacto">Contacto</a>
+        </li>
+
+        <!-- PORTAL -->
+        <li>
+            <a href="Portal de clientes.html">
+                <i class="fa-solid fa-circle-user"></i>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+        <!-- FORMULARIO DE RESERVA -->
+        <form action="#" method="post" class="form-reserva">
+
+            <div class="fila">
+
+                <div class="campo">
+                    <label for="llegada">Llegada</label>
+
+                    <input type="date"
+                        id="llegada"
+                        name="llegada"
+                        required>
+                </div>
+
+
+                <div class="campo">
+                    <label for="salida">Salida</label>
+
+                    <input type="date"
+                        id="salida"
+                        name="salida"
+                        required>
+                </div>
+
+
+                <div class="campo">
+                    <label for="adultos">Adultos</label>
+
+                    <input type="number"
+                        id="adultos"
+                        name="adultos"
+                        min="1"
+                        max="10"
+                        value="1"
+                        required>
+                </div>
+
+
+                <div class="campo">
+                    <label for="ninos">Niños</label>
+
+                    <input type="number"
+                        id="ninos"
+                        name="ninos"
+                        min="0"
+                        max="10"
+                        value="0">
+                </div>
+
+
+                <button class="reserva" type="submit">
+                    Reservar
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
 
 <!--Habitaciones-->
 
 
+<!--HABITACION 1-->
+
 <div class="habitaciones">
 
-    <img src="../IMG/Habitacion sencilla.png" alt="Habitación sencilla">
+    <div class="habitacion-slider">
+        <div class="slider-imagenes">
+            <img src="../IMG/Habitacion sencilla.png" alt="Habitación sencilla" class="activa">
+            <img src="../IMG/Habitacion sencilla doble.png" alt="Habitación sencilla - vista 2">
+            <img src="../IMG/Habitacion master.png" alt="Habitación sencilla - vista 3">
+        </div>
+
+        <button class="slider-flecha anterior" onclick="cambiarSlide(this, -1)">&#10094;</button>
+        <button class="slider-flecha siguiente" onclick="cambiarSlide(this, 1)">&#10095;</button>
+
+        <div class="slider-puntos">
+            <span class="punto activo" onclick="irASlide(this, 0)"></span>
+            <span class="punto" onclick="irASlide(this, 1)"></span>
+            <span class="punto" onclick="irASlide(this, 2)"></span>
+        </div>
+    </div>
 
     <div class="info">
-        <h2>Habitación sencilla</h2>
-        <p>Esta es la información de la habitación.</p>
-        <p>Precio: $100.000</p>
+        <h2>Habitación Sencilla</h2>
+        <p>Disfruta de una estancia cómoda y tranquila en un espacio diseñado para tu descanso. Cuenta con cama confortable, baño privado, TV, Wi-Fi y un ambiente acogedor ideal para viajeros.</p>
+        <p>Precio: $180.000 por noche</p>
+
+        <form class="reserva-mini" action="#" method="post">
+            <div class="reserva-mini-fila">
+                <input type="date" name="llegada" required>
+                <input type="date" name="salida" required>
+                <input type="number" name="huespedes" min="1" max="10" value="1" required>
+            </div>
+            <button type="submit">Reservar</button>
+        </form>
+    </div>
+
+</div>
+
+<br>
+
+<!--HABITACION 2-->
+
+<!--Habitaciones-->
+
+<div class="habitaciones">
+
+    <div class="habitacion-slider">
+        <div class="slider-imagenes">
+            <img src="../IMG/Habitacion sencilla.png" alt="Habitación sencilla" class="activa">
+            <img src="../IMG/Habitacion sencilla doble.png" alt="Habitación sencilla - vista 2">
+            <img src="../IMG/Habitacion master.png" alt="Habitación sencilla - vista 3">
+        </div>
+
+        <button class="slider-flecha anterior" onclick="cambiarSlide(this, -1)">&#10094;</button>
+        <button class="slider-flecha siguiente" onclick="cambiarSlide(this, 1)">&#10095;</button>
+
+        <div class="slider-puntos">
+            <span class="punto activo" onclick="irASlide(this, 0)"></span>
+            <span class="punto" onclick="irASlide(this, 1)"></span>
+            <span class="punto" onclick="irASlide(this, 2)"></span>
+        </div>
+    </div>
+
+    <div class="info">
+        <h2>Habitación Sencilla Doble</h2> 
+        <p>Un espacio elegante y confortable pensado para dos personas. Disfruta de una cama doble, baño privado, TV, Wi-Fi y un ambiente perfecto para relajarte después de un día de viaje.</p>
+        <p>Precio: $240.000 por noche</p>
+
+        <form class="reserva-mini" action="#" method="post">
+            <div class="reserva-mini-fila">
+                <input type="date" name="llegada" required>
+                <input type="date" name="salida" required>
+                <input type="number" name="huespedes" min="1" max="10" value="1" required>
+            </div>
+            <button type="submit">Reservar</button>
+        </form>
+    </div>
+
+</div>
+
+<BR>
+
+
+<!--HABITACION 3-->
+
+
+<!--Habitaciones-->
+
+<div class="habitaciones">
+
+    <div class="habitacion-slider">
+        <div class="slider-imagenes">
+            <img src="../IMG/Habitacion sencilla.png" alt="Habitación sencilla" class="activa">
+            <img src="../IMG/Habitacion sencilla doble.png" alt="Habitación sencilla - vista 2">
+            <img src="../IMG/Habitacion master.png" alt="Habitación sencilla - vista 3">
+        </div>
+
+        <button class="slider-flecha anterior" onclick="cambiarSlide(this, -1)">&#10094;</button>
+        <button class="slider-flecha siguiente" onclick="cambiarSlide(this, 1)">&#10095;</button>
+
+        <div class="slider-puntos">
+            <span class="punto activo" onclick="irASlide(this, 0)"></span>
+            <span class="punto" onclick="irASlide(this, 1)"></span>
+            <span class="punto" onclick="irASlide(this, 2)"></span>
+        </div>
+    </div>
+
+    <div class="info">
+        <h2>Suite</h2>
+        <p>Vive una experiencia más exclusiva en nuestra Suite, con amplios espacios y una decoración elegante. Incluye zona de descanso, cama premium, baño privado, TV, Wi-Fi y comodidades especiales.</p>
+        <p>Precio: $380.000 por noche</p>
+
+        <form class="reserva-mini" action="#" method="post">
+            <div class="reserva-mini-fila">
+                <input type="date" name="llegada" required>
+                <input type="date" name="salida" required>
+                <input type="number" name="huespedes" min="1" max="10" value="1" required>
+            </div>
+            <button type="submit">Reservar</button>
+        </form>
     </div>
 
 </div>
 
 
+<BR>
+
+
+<!--HABITACION 4-->
+
+
+<!--Habitaciones-->
+
 <div class="habitaciones">
 
-    <img src="../IMG/Habitacion sencilla doble.png" alt="Habitación sencilla">
+    <div class="habitacion-slider">
+        <div class="slider-imagenes">
+            <img src="../IMG/Habitacion sencilla.png" alt="Habitación sencilla" class="activa">
+            <img src="../IMG/Habitacion sencilla doble.png" alt="Habitación sencilla - vista 2">
+            <img src="../IMG/Habitacion master.png" alt="Habitación sencilla - vista 3">
+        </div>
+
+        <button class="slider-flecha anterior" onclick="cambiarSlide(this, -1)">&#10094;</button>
+        <button class="slider-flecha siguiente" onclick="cambiarSlide(this, 1)">&#10095;</button>
+
+        <div class="slider-puntos">
+            <span class="punto activo" onclick="irASlide(this, 0)"></span>
+            <span class="punto" onclick="irASlide(this, 1)"></span>
+            <span class="punto" onclick="irASlide(this, 2)"></span>
+        </div>
+    </div>
 
     <div class="info">
-        <h2>Habitación sencilla</h2>
-        <p>Esta es la información de la habitación.</p>
-        <p>Precio: $100.000</p>
+        <h2>V.I.P</h2>
+        <p>Experimenta el máximo nivel de confort y exclusividad en nuestra habitación V.I.P. Disfruta de espacios amplios, cama premium, baño privado, Wi-Fi, TV y detalles cuidadosamente seleccionados para una estancia inolvidable.</p>
+        <p>Precio: $550.000 por noche</p>
+
+        <form class="reserva-mini" action="#" method="post">
+            <div class="reserva-mini-fila">
+                <input type="date" name="llegada" required>
+                <input type="date" name="salida" required>
+                <input type="number" name="huespedes" min="1" max="10" value="1" required>
+            </div>
+            <button type="submit">Reservar</button>
+        </form>
     </div>
 
 </div>
 
 
-<div class="habitaciones">
+<BR>
 
-    <img src="../IMG/Habitacion master.png" alt="Habitación sencilla">
-
-    <div class="info">
-        <h2>Habitación sencilla</h2>
-        <p>Esta es la información de la habitación.</p>
-        <p>Precio: $100.000</p>
-    </div>
-
-</div>
-
-
-<div class="habitaciones">
-
-    <img src="../IMG/Habitacion master.png" alt="Habitación sencilla">
-
-    <div class="info">
-        <h2>Habitación sencilla</h2>
-        <p>Esta es la información de la habitación.</p>
-        <p>Precio: $100.000</p>
-    </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<BR>
 
 
 
 <footer>
 
-    <div class="footer-arriba">
+    <div class="footer-contenedor">
 
-        <a href="#">Política de Privacidad</a>
+        <div class="footer-logo">
+            <h2>BACATÁ</h2>
+            <p>HOTEL · RESTAURANTE · BOGOTÁ</p>
+        </div>
 
-        <a href="#">Protección de datos</a>
+        <div class="footer-columna">
+            <h3>HOTEL</h3>
+            <a href="#hotel">El Hotel</a>
+            <a href="#">Habitaciones</a>
+            <a href="#">Servicios</a>
+            <a href="#">Eventos</a>
+        </div>
 
-        <a href="#">Política de cookies</a>
+        <div class="footer-columna">
+            <h3>RESTAURANTE</h3>
+            <a href="#carta">Carta</a>
+            <a href="#desayuno">Desayunos</a>
+            <a href="#reservas">Reservas</a>
+            <a href="#contacto">Contacto</a>
+        </div>
 
-        <a href="#">Contrato de Alojamiento</a>
+        <div class="footer-columna">
+            <h3>SÍGUENOS</h3>
 
-        <a href="#">GHL Hoteles</a>
-
-        <a href="#">
-            Superintendencia de Industria y Comercio
-        </a>
+            <div class="footer-redes">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
 
     </div>
 
-
-    <div class="footer-abajo">
-
-        <p>
-            2026 COPYRIGHT - GHL HOTELES -
-            SITIO DESARROLLADO POR
-            <span>LÓGICA HVI v1.6.2</span>
-        </p>
-
+    <div class="footer-final">
+        <p>© 2026 Hotel Bacatá Bogotá · Todos los derechos reservados</p>
+        <p>Política de privacidad · Términos y condiciones</p>
     </div>
 
 </footer>

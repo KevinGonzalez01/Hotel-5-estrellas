@@ -1,0 +1,1830 @@
+/* =========================================================
+   RESET Y BASE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #000000;
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    position: absolute;
+    top: 8px;
+    left: 30px;
+
+    font-family: "Mea Culpa", cursive;
+    font-size: 40px;
+    font-weight: lighter;
+    line-height: 1;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+    z-index: 10;
+
+    transition: color 0.4s ease;
+}
+
+
+/* =========================================================
+   MENU PRINCIPAL
+========================================================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    z-index: 9999;
+
+    background-color: transparent;
+
+    transition: background-color 0.4s ease,
+                box-shadow 0.4s ease,
+                backdrop-filter 0.4s ease;
+}
+
+nav.scrolled {
+    background-color: rgba(207, 205, 205, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+nav > ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0 20px 0 auto;
+    padding: 0;
+
+    gap: 5px;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: block;
+
+    padding: 15px 10px;
+
+    color: #fdfdfd;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #aa7c11;
+}
+
+.redes {
+    display: flex;
+    gap: 18px;
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   SUBMENUS
+========================================================= */
+
+.submenu-items {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 210px;
+
+    margin: 0;
+    padding: 5px 0;
+
+    list-style: none;
+
+    background-color: rgba(207, 205, 205, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 8px 8px;
+}
+
+.dropdown:hover > .submenu-items {
+    display: block;
+}
+
+.submenu-items li {
+    width: 100%;
+}
+
+.submenu-items a {
+    padding: 12px 18px;
+
+    color: #0D0D0D;
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+.submenu-items a:hover {
+    background-color: #aa7c11;
+    color: #0D0D0D;
+}
+
+
+/* =========================================================
+   HERO / BANNER (con selector de imagen)
+========================================================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: #222;
+    overflow: hidden;
+}
+
+ {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .62);
+}
+
+.selector-imagen {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 5;
+}
+
+.selector-imagen label,
+.boton-imagen,
+.foto label,
+.salon-imagen label,
+.experiencia-imagen label,
+.empresarial-imagen label,
+.promocion-imagen label,
+.especial-imagen label {
+    display: inline-block;
+
+    background-color: #aa7c11;
+    color: white;
+
+    padding: 12px 18px;
+
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.selector-imagen input,
+.boton-imagen + input,
+.foto input,
+.salon-imagen input,
+.experiencia-imagen input,
+.empresarial-imagen input,
+.promocion-imagen input,
+.especial-imagen input {
+    display: none;
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-contenido p:first-child {
+    letter-spacing: 6px;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.hero-contenido p:not(:first-child) {
+    font-size: 18px;
+    color: #ddd;
+    margin: 30px 0;
+}
+
+.hero h1 {
+    font-size: 76px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 6px;
+}
+
+.descripcion {
+    max-width: 600px;
+    margin: 30px auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.boton {
+    display: inline-block;
+
+    background-color: #aa7c11;
+    color: white;
+
+    padding: 17px 35px;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.boton:hover,
+.selector-imagen label:hover,
+.boton-imagen:hover,
+.foto label:hover,
+.salon-imagen label:hover,
+.experiencia-imagen label:hover,
+.empresarial-imagen label:hover,
+.promocion-imagen label:hover,
+.especial-imagen label:hover {
+    background-color: white;
+    color: #000;
+}
+
+
+/* =========================================================
+   TÍTULOS DE SECCIÓN (comunes a todas las páginas)
+========================================================= */
+
+.subtitulo {
+    color: #aa7c11;
+    letter-spacing: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.presentacion,
+.introduccion {
+    padding: 110px 20%;
+    text-align: center;
+    background-color: #000;
+}
+
+.presentacion h2,
+.introduccion h2,
+.titulo-seccion h2 {
+    font-size: 50px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.presentacion p:not(.subtitulo),
+.introduccion p:not(.subtitulo) {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.titulo-seccion > p:first-child {
+    color: #000000;
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.descripcion-seccion {
+    max-width: 700px;
+    margin: 25px auto 0;
+    color: #888;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FORMULARIOS (reservas / contacto / opiniones)
+========================================================= */
+
+.reservas,
+.dejar-opinion {
+    padding: 110px 20%;
+    background-color: #000;
+}
+
+.reservas form,
+.dejar-opinion form {
+    max-width: 800px;
+    margin: auto;
+}
+
+.fila {
+    display: flex;
+    gap: 20px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 17px;
+    margin-bottom: 20px;
+
+    background-color: transparent;
+    border: 1px solid #777;
+    color: white;
+
+    font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #aa7c11;
+}
+
+select option {
+    color: black;
+}
+
+textarea {
+    height: 140px;
+    resize: none;
+}
+
+button {
+    padding: 18px 35px;
+
+    background-color: #aa7c11;
+    color: white;
+    border: none;
+
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* =========================================================
+   FOOTER (común a todas las páginas)
+========================================================= */
+
+footer {
+    background-color: #aa7c11be;
+}
+
+.footer-contenedor {
+    padding: 70px 7%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-logo h2 {
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.footer-logo p {
+    margin-top: 10px;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.footer-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-columna h3 {
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.footer-columna a,
+.footer-columna p {
+    font-size: 14px;
+}
+
+.footer-columna a:hover {
+    color: #000;
+}
+
+.footer-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-final {
+    padding: 25px 7%;
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESTAURANTE (página Gastronomía)
+========================================================= */
+
+.restaurante {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+}
+
+.restaurante-imagen {
+    position: relative;
+    background-color: #222;
+    overflow: hidden;
+}
+
+ {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    object-fit: cover;
+}
+
+.restaurante-imagen .boton-imagen {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 3;
+}
+
+.restaurante-texto {
+    padding: 90px;
+    background-color: #151515;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.restaurante-texto h2 {
+    font-size: 55px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.restaurante-texto p:not(.subtitulo) {
+    max-width: 550px;
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* CARTA */
+
+.carta {
+    padding: 110px 10%;
+    background-color: #000;
+}
+
+.carta-contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.categoria h3 {
+    color: #aa7c11;
+    font-size: 23px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.plato {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid #333;
+    padding: 22px 0;
+}
+
+.plato h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.plato p {
+    color: #777;
+    line-height: 1.5;
+}
+
+.plato strong {
+    color: #aa7c11;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+
+/* PLATO / SERVICIO ESPECIAL (usado en Gastronomía y Promociones) */
+
+.especial {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #151515;
+}
+
+.especial-imagen {
+    position: relative;
+    min-height: 600px;
+    background-color: #222;
+    overflow: hidden;
+}
+
+ {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.especial-contenido,
+.especial-texto {
+    max-width: 600px;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.especial h2,
+.especial-texto h2 {
+    font-size: 68px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.especial p:not(.subtitulo),
+.especial-texto > p:not(.subtitulo) {
+    color: #ddd;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.especial span {
+    color: #aa7c11;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.incluye {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.precio-especial {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.precio-especial span {
+    color: #666;
+    text-decoration: line-through;
+}
+
+.precio-especial strong {
+    color: #aa7c11;
+    font-size: 35px;
+    margin-top: 5px;
+}
+
+
+/* DESAYUNO */
+
+.desayuno {
+    padding: 110px 8%;
+    background-color: #111;
+}
+
+.desayuno-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.desayuno article {
+    padding: 40px 30px;
+    background-color: #000;
+    text-align: center;
+}
+
+.desayuno article h3 {
+    color: #aa7c11;
+    font-size: 19px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.desayuno article p {
+    color: #999;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.desayuno article strong {
+    color: white;
+    font-size: 20px;
+}
+
+
+/* BEBIDAS */
+
+.bebidas {
+    padding: 100px 15%;
+    background-color: #aa7c11;
+}
+
+.bebidas-texto {
+    max-width: 750px;
+    margin: auto;
+}
+
+.bebidas h2 {
+    font-size: 55px;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+.bebida {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .35);
+}
+
+.bebida strong {
+    color: #000;
+}
+
+
+/* HOTEL / SERVICIOS GENERALES */
+
+.hotel-servicios {
+    padding: 100px 10%;
+    background-color: #151515;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.hotel-servicios h2 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.hotel-servicios p:not(.subtitulo) {
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.servicios {
+    display: grid;
+    gap: 20px;
+}
+
+.servicios article {
+    padding: 20px 25px;
+    border-left: 2px solid #aa7c11;
+}
+
+.servicios h3 {
+    color: #aa7c11;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+
+/* CONTACTO (nota: en el HTML el bloque usa la clase "Contacto"
+   con mayúscula; en CSS los nombres de clase distinguen
+   mayúsculas de minúsculas, así que esta regla no se aplica
+   a ese bloque. Revisa el HTML y usa el mismo nombre en ambos
+   lados, por ejemplo "contacto" en minúscula en los dos. */
+
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contacto-info {
+    padding: 100px;
+    background-color: #000;
+}
+
+.contacto-info h2 {
+    font-size: 55px;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+.contacto-info p:not(.subtitulo) {
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.mapa {
+    min-height: 500px;
+    position: relative;
+    background-color: #222;
+    overflow: hidden;
+}
+
+ {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+}
+
+.mapa .boton-imagen {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 3;
+}
+
+
+/* =========================================================
+   BIENESTAR (Spa / Gimnasio)
+========================================================= */
+
+.servicio-grande {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #151515;
+}
+
+.servicio-imagen {
+    position: relative;
+    min-height: 600px;
+    background-color: #222;
+    overflow: hidden;
+}
+
+ {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    object-fit: cover;
+}
+
+.servicio-texto {
+    padding: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.servicio-texto h2 {
+    font-size: 65px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.servicio-texto p:not(.subtitulo) {
+    max-width: 550px;
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.datos {
+    display: flex;
+    justify-content: space-between;
+    max-width: 550px;
+    border-bottom: 1px solid #444;
+    padding: 18px 0;
+    margin-top: 10px;
+}
+
+.datos span {
+    color: #777;
+    letter-spacing: 2px;
+}
+
+.datos strong {
+    color: #aa7c11;
+    font-size: 13px;
+}
+
+.tratamientos {
+    padding: 110px 8%;
+    background-color: #000;
+}
+
+.tratamientos-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tratamientos article {
+    padding: 45px 35px;
+    background-color: #151515;
+    border-top: 2px solid #aa7c11;
+}
+
+.icono {
+    color: #aa7c11;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.tratamientos h3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.tratamientos p {
+    color: #888;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.tratamientos strong {
+    color: #aa7c11;
+    font-size: 18px;
+}
+
+.zonas {
+    padding: 110px 8%;
+    background-color: #aa7c11be;
+}
+
+.zonas .subtitulo {
+    color: #fff;
+}
+
+.zonas-contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.zonas article {
+    padding: 35px 25px;
+    border: 1px solid rgba(255, 255, 255, .4);
+}
+
+.zona-numero {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.zonas h3 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.zonas p {
+    color: #eee;
+    line-height: 1.7;
+}
+
+.gimnasio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+    background-color: #111;
+}
+
+.gimnasio-imagen {
+    position: relative;
+    min-height: 600px;
+    background-color: #222;
+    overflow: hidden;
+}
+
+ {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    object-fit: cover;
+}
+
+.gimnasio-texto {
+    padding: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gimnasio-texto h2 {
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.gimnasio-texto p:not(.subtitulo) {
+    max-width: 550px;
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    color: #aaa;
+}
+
+.experiencias {
+    padding: 110px 8%;
+    background-color: #000;
+}
+
+.experiencias-contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.experiencias article {
+    padding: 35px 25px;
+    border-bottom: 1px solid #555;
+}
+
+.experiencias h3 {
+    color: #aa7c11;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.experiencias p {
+    color: #888;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   EVENTOS
+========================================================= */
+
+.salones {
+    padding: 110px 8%;
+    background-color: #151515;
+}
+
+.salones-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.salon {
+    background-color: #000;
+}
+
+.salon-imagen {
+    height: 300px;
+    position: relative;
+    background-color: #292929;
+    overflow: hidden;
+}
+
+ {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.salon-imagen label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.salon-info {
+    padding: 35px;
+}
+
+.numero {
+    color: #aa7c11;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.salon-info h3 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.salon-info > p:not(.numero) {
+    color: #888;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.capacidad {
+    padding: 18px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.capacidad span {
+    color: #666;
+}
+
+.capacidad strong {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.precio {
+    padding-top: 20px;
+    color: #777;
+}
+
+.precio strong {
+    color: #aa7c11;
+}
+
+.experiencia {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #000;
+}
+
+.experiencia-imagen {
+    min-height: 600px;
+    position: relative;
+    background-color: #222;
+    overflow: hidden;
+}
+
+ {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.experiencia-imagen label {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 5;
+}
+
+.experiencia-texto {
+    padding: 90px;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.experiencia-texto h2,
+.empresarial-texto h2 {
+    font-size: 70px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.experiencia-texto p:not(.subtitulo),
+.empresarial-texto p:not(.subtitulo) {
+    max-width: 550px;
+    color: #999;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.empresarial {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #151515;
+}
+
+.empresarial-texto {
+    padding: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.empresarial-imagen {
+    min-height: 600px;
+    position: relative;
+    background-color: #222;
+    overflow: hidden;
+}
+
+ {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.servicios-empresariales {
+    max-width: 550px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    color: #aaa;
+    margin-top: 15px;
+}
+
+.tipos-eventos {
+    padding: 110px 8%;
+    background-color: #000;
+}
+
+.eventos-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.eventos-contenedor article {
+    padding: 40px 30px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.eventos-contenedor article:hover {
+    border-color: #aa7c11;
+    transform: translateY(-5px);
+}
+
+.evento-numero {
+    color: #aa7c11;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.eventos-contenedor h3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.eventos-contenedor p {
+    color: #888;
+    line-height: 1.8;
+}
+
+.paquetes {
+    padding: 110px 8%;
+    background-color: #aa7c11;
+}
+
+.paquetes .subtitulo {
+    color: white;
+}
+
+.paquetes-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.paquetes article {
+    position: relative;
+    padding: 45px 35px;
+    background-color: #000;
+    text-align: center;
+}
+
+.paquetes article.destacado {
+    transform: translateY(-15px);
+    border: 2px solid #fff;
+}
+
+.recomendado {
+    background-color: #aa7c11;
+    padding: 8px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.paquetes h3 {
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.precio-paquete {
+    color: #aa7c11;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.paquetes article > p:not(.recomendado) {
+    padding: 10px;
+    color: #888;
+    border-bottom: 1px solid #222;
+}
+
+.paquetes .boton {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   PROMOCIONES
+========================================================= */
+
+.promociones {
+    padding: 110px 7%;
+    background-color: #151515;
+}
+
+.promociones-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.promocion {
+    background-color: #000;
+}
+
+.promocion-imagen {
+    height: 280px;
+    position: relative;
+    background-color: #292929;
+    overflow: hidden;
+}
+
+ {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promocion-imagen label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+}
+
+.descuento {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #aa7c11;
+    padding: 12px 18px;
+    font-weight: bold;
+}
+
+.promocion-contenido {
+    padding: 35px;
+}
+
+.categoria {
+    color: #aa7c11;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.promocion h3 {
+    font-size: 23px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.promocion-contenido > p:not(.categoria) {
+    color: #888;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.precios {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.precio-anterior {
+    color: #666;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+
+.precios strong {
+    color: #aa7c11;
+    font-size: 25px;
+}
+
+.beneficios {
+    padding: 110px 8%;
+    background-color: #aa7c11;
+}
+
+.beneficios .subtitulo {
+    color: white;
+}
+
+.beneficios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.beneficios article {
+    padding: 35px 25px;
+    border: 1px solid rgba(255, 255, 255, .4);
+}
+
+.beneficios article span {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.beneficios h3 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.beneficios p {
+    color: #eee;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GALERÍA Y OPINIONES
+========================================================= */
+
+.galeria {
+    padding: 110px 7%;
+    background-color: #151515;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.filtros button {
+    padding: 13px 22px;
+    background-color: transparent;
+    border: 1px solid #555;
+    color: #aaa;
+    letter-spacing: 1px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.filtros button:hover {
+    background-color: #aa7c11;
+    border-color: #aa7c11;
+    color: white;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 280px;
+    gap: 15px;
+}
+
+.foto {
+    position: relative;
+    background-color: #292929;
+    overflow: hidden;
+}
+
+.foto.grande {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+ {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.foto:hover img {
+    transform: scale(1.05);
+}
+
+.foto::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 45%, rgba(0, 0, 0, 0.8));
+    pointer-events: none;
+}
+
+.foto-texto {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 4;
+}
+
+.foto-texto span {
+    color: #aa7c11;
+    font-size: 13px;
+}
+
+.foto-texto h3 {
+    margin-top: 8px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.opiniones {
+    padding: 110px 8%;
+    background-color: #151515;
+}
+
+.calificacion-general {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.numero-calificacion {
+    font-size: 75px;
+    font-weight: 300;
+}
+
+.estrellas {
+    color: #aa7c11;
+    font-size: 22px;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.calificacion-general p {
+    color: #777;
+}
+
+.opiniones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.opinion {
+    padding: 40px 35px;
+    background-color: #000;
+    border: 1px solid #333;
+}
+
+.opinion > p {
+    color: #999;
+    line-height: 1.8;
+    margin: 25px 0 30px;
+}
+
+.persona {
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #aa7c11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.persona strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.persona span {
+    color: #666;
+    font-size: 12px;
+}
+
+.reserva-final {
+    padding: 120px 10%;
+    background-color: #aa7c11;
+    text-align: center;
+}
+
+.reserva-final .subtitulo {
+    color: white;
+}
+
+.reserva-final h2 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.reserva-final p:not(.subtitulo) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.reserva-final .boton {
+    background-color: #000;
+}
+
+.reserva-final .boton:hover {
+    background-color: white;
+    color: #000;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .salones-contenedor,
+    .eventos-contenedor,
+    .paquetes-contenedor,
+    .promociones-contenedor,
+    .beneficios-contenedor,
+    .zonas-contenedor,
+    .experiencias-contenedor,
+    .opiniones-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .redes {
+        display: none;
+    }
+
+    .hero {
+        height: 550px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .restaurante,
+    .especial,
+    .contacto,
+    .hotel-servicios,
+    .servicio-grande,
+    .gimnasio,
+    .experiencia,
+    .empresarial {
+        grid-template-columns: 1fr;
+    }
+
+    .restaurante-imagen,
+    .especial-imagen,
+    .servicio-imagen,
+    .gimnasio-imagen,
+    .experiencia-imagen,
+    .empresarial-imagen {
+        min-height: 400px;
+    }
+
+    .restaurante-imagen img,
+    .especial-imagen img,
+    .servicio-imagen img,
+    .gimnasio-imagen img,
+    .experiencia-imagen img,
+    .empresarial-imagen img {
+        min-height: 400px;
+    }
+
+    .especial-contenido,
+    .especial-texto,
+    .restaurante-texto,
+    .contacto-info,
+    .servicio-texto,
+    .gimnasio-texto,
+    .experiencia-texto,
+    .empresarial-texto {
+        padding: 60px 30px;
+    }
+
+    .carta-contenedor,
+    .desayuno-contenedor,
+    .tratamientos-contenedor,
+    .zonas-contenedor,
+    .experiencias-contenedor,
+    .salones-contenedor,
+    .eventos-contenedor,
+    .paquetes-contenedor,
+    .promociones-contenedor,
+    .beneficios-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .paquetes article.destacado {
+        transform: none;
+    }
+
+    .reservas,
+    .dejar-opinion {
+        padding: 70px 30px;
+    }
+
+    .fila {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .footer-contenedor {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-final {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+    }
+
+    .foto.grande {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .opiniones-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .presentacion,
+    .introduccion {
+        padding: 70px 30px;
+    }
+
+    .presentacion h2,
+    .introduccion h2,
+    .titulo-seccion h2 {
+        font-size: 35px;
+    }
+
+    .especial h2,
+    .especial-texto h2,
+    .servicio-texto h2,
+    .gimnasio-texto h2,
+    .experiencia-texto h2,
+    .empresarial-texto h2 {
+        font-size: 45px;
+    }
+
+    .hotel-servicios h2 {
+        font-size: 38px;
+    }
+
+    .reserva-final h2 {
+        font-size: 35px;
+    }
+
+    .incluye {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .selector-imagen {
+        top: 15px;
+        right: 15px;
+    }
+}

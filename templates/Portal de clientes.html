@@ -15,31 +15,94 @@
 
 <body>
 
-     <nav>
+<!-- MENU -->
+<nav>
 
-        <ul>
+    <!-- LOGO -->
+    <div class="logo">
+        Bacatá Crown
+    </div>
 
-            <li><a href="Index.html">Inicio</a></li>
+    <ul>
 
-            <li><a href="Habitaciones.html">Habitaciones</a></li>
+        <li>
+            <a href="Index.html">Inicio</a>
+        </li>
 
-            <li><a href="Oasis.html">Oasis</a></li>
+        <li>
+            <a href="Habitaciones.html">Habitaciones</a>
+        </li>
 
-            <li><a href="Galeria y Opiniones.html">Galería y opiniones</a></li>
+        <!-- OASIS -->
+        <li class="dropdown">
+            <a href="biniestar.index.html">Oasis ▾</a>
 
-            <li><a href="Eventos.html">Eventos</a></li>
+            <ul class="submenu-items">
+                <li><a href="biniestar.index.html#piscina">PISCINA</a></li>
+                <li><a href="biniestar.index.html#spa">SPA</a></li>
+                <li><a href="biniestar.index.html#gimnasio">GIMNASIO</a></li>
+                <li><a href="biniestar.index.html#servicios">SERVICIOS</a></li>
+                <li><a href="biniestar.index.html#reservas">RESERVAS</a></li>
+            </ul>
+        </li>
 
-            <li><a href="Restaurante.html">Restaurante</a></li>
+        <!-- GALERÍA -->
+        <li class="dropdown">
+            <a href="galeria.html">Galería y opiniones ▾</a>
 
-            <li><a href="Promociones.html">Promociones</a></li>
+<ul class="submenu-items">
+    <li><a href="galeria.html#galeria">GALERÍA</a></li>
+    <li><a href="galeria.html#opiniones">OPINIONES</a></li>
+</ul>
+        </li>
 
-            <li><a href="Index.html#contacto">Contacto</a></li>
+        <!-- EVENTOS -->
+        <li class="dropdown">
+            <a href="eventos.index.html">Eventos ▾</a>
 
-            <li><a href="Portal de clientes.html"><i class="fa-solid fa-circle-user"></i></i></a></li>
+            <ul class="submenu-items">
+                <li><a href="eventos.index.html#salones">SALONES</a></li>
+                <li><a href="eventos.index.html#bodas">BODAS</a></li>
+                <li><a href="eventos.index.html#empresarial">EMPRESARIAL</a></li>
+                <li><a href="eventos.index.html#eventos">EVENTOS</a></li>
+                <li><a href="eventos.index.html#reservas">RESERVAS</a></li>
+            </ul>
+        </li>
 
-        </ul>
+        <!-- RESTAURANTE -->
+        <li class="dropdown">
+            <a href="gastronomia.index.html">Restaurante ▾</a>
 
-    </nav>
+            <ul class="submenu-items">
+                <li><a href="gastronomia.index.html#hotel">EL HOTEL</a></li>
+                <li><a href="gastronomia.index.html#restaurante">RESTAURANTE</a></li>
+                <li><a href="gastronomia.index.html#carta">CARTA</a></li>
+                <li><a href="gastronomia.index.html#desayuno">DESAYUNO</a></li>
+                <li><a href="gastronomia.index.html#reservas">RESERVAS</a></li>
+                <li><a href="gastronomia.index.html#contacto">CONTACTO</a></li>
+            </ul>
+        </li>
+
+        <!-- PROMOCIONES -->
+        <li class="dropdown">
+            <a href="promociones.html">Promociones </a>
+        </li>
+
+        <!-- CONTACTO -->
+        <li>
+            <a href="index.html#contacto">Contacto</a>
+        </li>
+
+        <!-- PORTAL -->
+        <li>
+            <a href="Portal de clientes.html">
+                <i class="fa-solid fa-circle-user"></i>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
 
 
     <!-- PORTAL DE CLIENTES -->
@@ -144,33 +207,45 @@
 
 <footer>
 
-    <div class="footer-arriba">
+    <div class="footer-contenedor">
 
-        <a href="#">Política de Privacidad</a>
+        <div class="footer-logo">
+            <h2>BACATÁ</h2>
+            <p>HOTEL · RESTAURANTE · BOGOTÁ</p>
+        </div>
 
-        <a href="#">Protección de datos</a>
+        <div class="footer-columna">
+            <h3>HOTEL</h3>
+            <a href="#hotel">El Hotel</a>
+            <a href="#">Habitaciones</a>
+            <a href="#">Servicios</a>
+            <a href="#">Eventos</a>
+        </div>
 
-        <a href="#">Política de cookies</a>
+        <div class="footer-columna">
+            <h3>RESTAURANTE</h3>
+            <a href="#carta">Carta</a>
+            <a href="#desayuno">Desayunos</a>
+            <a href="#reservas">Reservas</a>
+            <a href="#contacto">Contacto</a>
+        </div>
 
-        <a href="#">Contrato de Alojamiento</a>
+        <div class="footer-columna">
+            <h3>SÍGUENOS</h3>
 
-        <a href="#">GHL Hoteles</a>
-
-        <a href="#">
-            Superintendencia de Industria y Comercio
-        </a>
+            <div class="footer-redes">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
 
     </div>
 
-
-    <div class="footer-abajo">
-
-        <p>
-            2026 COPYRIGHT - GHL HOTELES -
-            SITIO DESARROLLADO POR
-            <span>LÓGICA HVI v1.6.2</span>
-        </p>
-
+    <div class="footer-final">
+        <p>© 2026 Hotel Bacatá Bogotá · Todos los derechos reservados</p>
+        <p>Política de privacidad · Términos y condiciones</p>
     </div>
 
 </footer>
