@@ -1673,19 +1673,60 @@ footer {
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 1100px) {
+/* =========================================================
+   TABLETS Y PANTALLAS MEDIANAS
+========================================================= */
 
-    nav {
-        gap: 14px;
+@media (max-width: 1200px) {
+
+    /* MENÚ */
+
+    nav > ul {
+        margin-right: 15px;
+        gap: 0;
     }
 
     nav a {
-        font-size: 10px;
+        font-size: 16px;
+        padding: 12px 8px;
+    }
+
+    .logo {
+        font-size: 34px;
+        left: 20px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: 600px;
+    }
+
+    .hero-contenido {
+        min-height: 600px;
+        padding: 100px 30px 60px;
     }
 
     .hero h1 {
-        font-size: 58px;
+        font-size: 60px;
     }
+
+
+    /* SECCIONES */
+
+    .presentacion,
+    .introduccion {
+        padding: 90px 10%;
+    }
+
+    .reservas,
+    .dejar-opinion {
+        padding: 90px 10%;
+    }
+
+
+    /* COLUMNAS */
 
     .salones-contenedor,
     .eventos-contenedor,
@@ -1695,35 +1736,132 @@ footer {
     .zonas-contenedor,
     .experiencias-contenedor,
     .opiniones-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
+
+
+    .tratamientos-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 
     .galeria-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+
+    /* FOOTER */
+
+    .footer-contenedor {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 35px;
+    }
+
 }
 
-@media (max-width: 800px) {
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* MENÚ */
 
     nav {
+        height: auto;
+        min-height: 70px;
+        padding: 5px 10px;
+    }
+
+    nav > ul {
+        width: 100%;
+        justify-content: flex-end;
         flex-wrap: wrap;
+        margin: 0;
+        padding-left: 150px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 10px 7px;
     }
 
     .redes {
         display: none;
     }
 
+
+    /* SUBMENÚ */
+
+    .submenu-items {
+        min-width: 190px;
+    }
+
+    .submenu-items a {
+        font-size: 12px;
+        padding: 11px 15px;
+    }
+
+
+    /* HERO */
+
     .hero {
         height: 550px;
     }
 
-    .hero h1 {
-        font-size: 44px;
+    .hero-contenido {
+        min-height: 550px;
+        padding: 100px 25px 50px;
     }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: 4px;
+    }
+
+    .hero-contenido p:first-child {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+
+    .descripcion {
+        max-width: 90%;
+        font-size: 16px;
+    }
+
+
+    /* TÍTULOS */
+
+    .presentacion h2,
+    .introduccion h2,
+    .titulo-seccion h2 {
+        font-size: 42px;
+    }
+
+
+    /* FORMULARIOS */
+
+    .reservas,
+    .dejar-opinion {
+        padding: 80px 7%;
+    }
+
+    .fila {
+        flex-wrap: wrap;
+    }
+
+    .fila .campo {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+
+    /* SECCIONES DE DOS COLUMNAS */
 
     .restaurante,
     .especial,
     .contacto,
+    .Contacto,
     .hotel-servicios,
     .servicio-grande,
     .gimnasio,
@@ -1732,13 +1870,14 @@ footer {
         grid-template-columns: 1fr;
     }
 
+
     .restaurante-imagen,
     .especial-imagen,
     .servicio-imagen,
     .gimnasio-imagen,
     .experiencia-imagen,
     .empresarial-imagen {
-        min-height: 400px;
+        min-height: 450px;
     }
 
     .restaurante-imagen img,
@@ -1747,8 +1886,11 @@ footer {
     .gimnasio-imagen img,
     .experiencia-imagen img,
     .empresarial-imagen img {
-        min-height: 400px;
+        min-height: 450px;
     }
+
+
+    /* CONTENIDO */
 
     .especial-contenido,
     .especial-texto,
@@ -1758,29 +1900,292 @@ footer {
     .gimnasio-texto,
     .experiencia-texto,
     .empresarial-texto {
-        padding: 60px 30px;
+        padding: 70px 45px;
     }
 
-    .carta-contenedor,
-    .desayuno-contenedor,
-    .tratamientos-contenedor,
-    .zonas-contenedor,
-    .experiencias-contenedor,
-    .salones-contenedor,
-    .eventos-contenedor,
-    .paquetes-contenedor,
-    .promociones-contenedor,
-    .beneficios-contenedor {
+
+    /* CARTA */
+
+    .carta {
+        padding: 90px 7%;
+    }
+
+    .carta-contenedor {
         grid-template-columns: 1fr;
+        gap: 50px;
     }
 
-    .paquetes article.destacado {
-        transform: none;
+
+    /* DESAYUNO */
+
+    .desayuno {
+        padding: 90px 7%;
     }
+
+    .desayuno-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* TRATAMIENTOS */
+
+    .tratamientos {
+        padding: 90px 7%;
+    }
+
+
+    /* ZONAS */
+
+    .zonas {
+        padding: 90px 7%;
+    }
+
+    .zonas-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* EXPERIENCIAS */
+
+    .experiencias {
+        padding: 90px 7%;
+    }
+
+    .experiencias-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* EVENTOS */
+
+    .salones {
+        padding: 90px 7%;
+    }
+
+    .salones-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tipos-eventos {
+        padding: 90px 7%;
+    }
+
+    .eventos-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* PROMOCIONES */
+
+    .promociones {
+        padding: 90px 7%;
+    }
+
+    .promociones-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* BENEFICIOS */
+
+    .beneficios {
+        padding: 90px 7%;
+    }
+
+    .beneficios-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* OPINIONES */
+
+    .opiniones {
+        padding: 90px 7%;
+    }
+
+    .opiniones-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* FOOTER */
+
+    .footer-contenedor {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* =====================================================
+       BASE
+    ===================================================== */
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       MENÚ
+    ===================================================== */
+
+    nav {
+        position: fixed;
+        height: auto;
+        min-height: 60px;
+        padding: 5px 10px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo {
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 30px;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    nav > ul {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    nav li {
+        flex-shrink: 0;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 8px 5px;
+    }
+
+
+    /* SUBMENÚ */
+
+    .submenu-items {
+        min-width: 160px;
+    }
+
+    .submenu-items a {
+        font-size: 11px;
+        padding: 10px 12px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        height: 600px;
+    }
+
+    .hero-contenido {
+        min-height: 600px;
+        padding: 130px 20px 50px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        letter-spacing: 3px;
+        line-height: 1.1;
+    }
+
+    .hero-contenido p:first-child {
+        font-size: 11px;
+        letter-spacing: 3px;
+        margin-bottom: 18px;
+    }
+
+    .hero-contenido p:not(:first-child) {
+        font-size: 15px;
+        margin: 20px 0;
+    }
+
+    .descripcion {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.6;
+        margin: 20px auto;
+    }
+
+    .boton {
+        padding: 14px 25px;
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
+       SELECTOR DE IMAGEN
+    ===================================================== */
+
+    .selector-imagen {
+        top: 10px;
+        right: 10px;
+    }
+
+    .selector-imagen label {
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+
+
+    /* =====================================================
+       TÍTULOS
+    ===================================================== */
+
+    .presentacion,
+    .introduccion {
+        padding: 70px 25px;
+    }
+
+    .presentacion h2,
+    .introduccion h2,
+    .titulo-seccion h2 {
+        font-size: 32px;
+        letter-spacing: 2px;
+        line-height: 1.2;
+    }
+
+    .presentacion p:not(.subtitulo),
+    .introduccion p:not(.subtitulo) {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .subtitulo {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+
+    /* =====================================================
+       FORMULARIOS
+    ===================================================== */
 
     .reservas,
     .dejar-opinion {
-        padding: 70px 30px;
+        padding: 70px 20px;
+    }
+
+    .reservas form,
+    .dejar-opinion form {
+        width: 100%;
     }
 
     .fila {
@@ -1788,18 +2193,326 @@ footer {
         gap: 0;
     }
 
-    .footer-contenedor {
-        grid-template-columns: 1fr 1fr;
+    .fila .campo {
+        width: 100%;
+        flex: none;
     }
 
-    .footer-final {
-        flex-direction: column;
+    input,
+    select,
+    textarea {
+        width: 100%;
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+
+    /* =====================================================
+       SECCIONES DE DOS COLUMNAS
+    ===================================================== */
+
+    .restaurante,
+    .especial,
+    .contacto,
+    .Contacto,
+    .hotel-servicios,
+    .servicio-grande,
+    .gimnasio,
+    .experiencia,
+    .empresarial {
+        grid-template-columns: 1fr;
+    }
+
+
+    .restaurante-imagen,
+    .especial-imagen,
+    .servicio-imagen,
+    .gimnasio-imagen,
+    .experiencia-imagen,
+    .empresarial-imagen {
+        min-height: 330px;
+    }
+
+
+    .restaurante-imagen img,
+    .especial-imagen img,
+    .servicio-imagen img,
+    .gimnasio-imagen img,
+    .experiencia-imagen img,
+    .empresarial-imagen img {
+        min-height: 330px;
+    }
+
+
+    .restaurante-texto,
+    .especial-contenido,
+    .especial-texto,
+    .contacto-info,
+    .servicio-texto,
+    .gimnasio-texto,
+    .experiencia-texto,
+    .empresarial-texto {
+        padding: 55px 25px;
+    }
+
+
+    /* =====================================================
+       TÍTULOS GRANDES
+    ===================================================== */
+
+    .restaurante-texto h2,
+    .especial h2,
+    .especial-texto h2,
+    .servicio-texto h2,
+    .gimnasio-texto h2,
+    .experiencia-texto h2,
+    .empresarial-texto h2 {
+        font-size: 42px;
+        line-height: 1.1;
+        letter-spacing: 2px;
+    }
+
+    .hotel-servicios h2 {
+        font-size: 36px;
+    }
+
+
+    /* =====================================================
+       CARTA
+    ===================================================== */
+
+    .carta {
+        padding: 70px 25px;
+    }
+
+    .carta-contenedor {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .plato {
         gap: 15px;
+    }
+
+    .plato h4 {
+        font-size: 16px;
+    }
+
+    .plato p {
+        font-size: 13px;
+    }
+
+    .plato strong {
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       DESAYUNO
+    ===================================================== */
+
+    .desayuno {
+        padding: 70px 20px;
+    }
+
+    .desayuno-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       BEBIDAS
+    ===================================================== */
+
+    .bebidas {
+        padding: 70px 25px;
+    }
+
+    .bebidas h2 {
+        font-size: 40px;
+    }
+
+    .bebida {
+        gap: 20px;
+    }
+
+
+    /* =====================================================
+       SERVICIOS
+    ===================================================== */
+
+    .servicios {
+        gap: 15px;
+    }
+
+    .servicios article {
+        padding: 18px 20px;
+    }
+
+
+    /* =====================================================
+       DATOS
+    ===================================================== */
+
+    .datos {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    /* =====================================================
+       TRATAMIENTOS
+    ===================================================== */
+
+    .tratamientos {
+        padding: 70px 20px;
+    }
+
+    .tratamientos-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .tratamientos article {
+        padding: 35px 25px;
+    }
+
+
+    /* =====================================================
+       ZONAS
+    ===================================================== */
+
+    .zonas {
+        padding: 70px 20px;
+    }
+
+    .zonas-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       EXPERIENCIAS
+    ===================================================== */
+
+    .experiencias {
+        padding: 70px 20px;
+    }
+
+    .experiencias-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       EVENTOS
+    ===================================================== */
+
+    .salones {
+        padding: 70px 20px;
+    }
+
+    .salones-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .salon-imagen {
+        height: 250px;
+    }
+
+    .salon-info {
+        padding: 25px;
+    }
+
+
+    .tipos-eventos {
+        padding: 70px 20px;
+    }
+
+    .eventos-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       PAQUETES
+    ===================================================== */
+
+    .paquetes {
+        padding: 70px 20px;
+    }
+
+    .paquetes-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .paquetes article.destacado {
+        transform: none;
+    }
+
+
+    /* =====================================================
+       PROMOCIONES
+    ===================================================== */
+
+    .promociones {
+        padding: 70px 20px;
+    }
+
+    .promociones-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .promocion-imagen {
+        height: 240px;
+    }
+
+    .promocion-contenido {
+        padding: 25px;
+    }
+
+
+    /* =====================================================
+       BENEFICIOS
+    ===================================================== */
+
+    .beneficios {
+        padding: 70px 20px;
+    }
+
+    .beneficios-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       GALERÍA
+    ===================================================== */
+
+    .galeria {
+        padding: 70px 20px;
+    }
+
+    .filtros {
+        gap: 7px;
+    }
+
+    .filtros button {
+        padding: 10px 15px;
+        font-size: 10px;
     }
 
     .galeria-grid {
         grid-template-columns: 1fr;
-        grid-auto-rows: 300px;
+        grid-auto-rows: 250px;
+    }
+
+    .foto {
+        min-height: 250px;
     }
 
     .foto.grande {
@@ -1807,51 +2520,148 @@ footer {
         grid-row: span 1;
     }
 
+
+    /* =====================================================
+       OPINIONES
+    ===================================================== */
+
+    .opiniones {
+        padding: 70px 20px;
+    }
+
+    .calificacion-general {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .numero-calificacion {
+        font-size: 60px;
+    }
+
     .opiniones-grid {
         grid-template-columns: 1fr;
     }
+
+    .opinion {
+        padding: 30px 25px;
+    }
+
+
+    /* =====================================================
+       CONTACTO
+    ===================================================== */
+
+    .contacto-info {
+        padding: 60px 25px;
+    }
+
+    .contacto-info h2 {
+        font-size: 40px;
+    }
+
+    .mapa {
+        min-height: 350px;
+    }
+
+    .mapa img {
+        min-height: 350px;
+    }
+
+
+    /* =====================================================
+       RESERVA FINAL
+    ===================================================== */
+
+    .reserva-final {
+        padding: 80px 25px;
+    }
+
+    .reserva-final h2 {
+        font-size: 34px;
+        letter-spacing: 2px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+        padding: 55px 25px;
+        gap: 35px;
+    }
+
+    .footer-logo h2 {
+        font-size: 34px;
+    }
+
+    .footer-final {
+        padding: 20px 25px;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
 }
 
-@media (max-width: 500px) {
 
-    .presentacion,
-    .introduccion {
-        padding: 70px 30px;
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 26px;
+    }
+
+    nav a {
+        font-size: 10px;
+        padding: 7px 4px;
+    }
+
+    .hero {
+        height: 550px;
+    }
+
+    .hero-contenido {
+        min-height: 550px;
+        padding: 120px 15px 40px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-contenido p:first-child {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .descripcion {
+        font-size: 14px;
     }
 
     .presentacion h2,
     .introduccion h2,
     .titulo-seccion h2 {
-        font-size: 35px;
+        font-size: 28px;
     }
 
+    .restaurante-texto h2,
     .especial h2,
     .especial-texto h2,
     .servicio-texto h2,
     .gimnasio-texto h2,
     .experiencia-texto h2,
     .empresarial-texto h2 {
-        font-size: 45px;
-    }
-
-    .hotel-servicios h2 {
-        font-size: 38px;
+        font-size: 36px;
     }
 
     .reserva-final h2 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
-    .incluye {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-contenedor {
-        grid-template-columns: 1fr;
-    }
-
-    .selector-imagen {
-        top: 15px;
-        right: 15px;
-    }
 }
