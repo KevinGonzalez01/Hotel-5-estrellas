@@ -25,6 +25,102 @@ body {
     
 }
 
+/* ================================
+   PRESENTACIÓN DE ENTRADA
+================================ */
+
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 99999;
+
+    transition: opacity 1s ease,
+                visibility 1s ease;
+}
+
+.intro-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.intro h1 {
+    margin: 0;
+
+    font-family: "Mea Culpa", cursive;
+
+    font-size: clamp(60px, 9vw, 120px);
+
+    color: #aa7c11;
+
+    letter-spacing: 2px;
+}
+
+.linea {
+    width: 120px;
+    height: 1px;
+
+    background: #aaa;
+
+    margin: 15px 0 25px;
+}
+
+.intro p {
+    color: #ddd;
+
+    font-size: clamp(16px, 2vw, 22px);
+
+    letter-spacing: 2px;
+
+    margin-bottom: 40px;
+}
+
+.intro button {
+    padding: 14px 35px;
+
+    background: transparent;
+
+    border: 1px solid #aa7c11;
+
+    color: white;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.intro button:hover {
+    background: #aa7c11;
+    color: #000;
+}
+
+/* Cuando desaparece */
+
+.intro.ocultar {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 
 /*HERO*/
 
@@ -193,6 +289,33 @@ nav.scrolled {
     -webkit-backdrop-filter: blur(10px);
 
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   TOGGLE MENÚ MÓVIL (hamburguesa)
+   Requiere en el HTML un botón: <button class="menu-toggle">&#9776;</button>
+   dentro de <nav>, antes o después del <ul>, y que el JS le añada/quite
+   la clase "abierto" a nav > ul al hacer click.
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    position: absolute;
+    right: 20px;
+    top: 12px;
+
+    z-index: 10000;
 }
 
 
@@ -448,7 +571,23 @@ nav.scrolled {
     font-weight: bold;
 }
 
-/*Habitaciones*/
+
+
+
+
+.habitacion11{
+    width: 100%;
+    max-width: 1800px;
+    margin: 50px auto;
+
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+/* =========================================================
+   FICHA DE HABITACIÓN
+========================================================= */
 
 .habitacion {
     width: 90%;
@@ -462,7 +601,11 @@ nav.scrolled {
     align-items: center;
 }
 
-/* INFORMACIÓN */
+
+/* =========================================================
+   INFORMACIÓN
+========================================================= */
+
 .info {
     width: 100%;
     padding: 20px;
@@ -486,24 +629,134 @@ nav.scrolled {
     color: #FFFFFF;
 }
 
-/* FOTOS */
+
+/* =========================================================
+   SLIDER DENTRO DE INFO
+========================================================= */
+
+.slider-info {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 25px;
+    position: relative;
+}
+
+.slider-info img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    display: block;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   BOTONES DEL SLIDER
+========================================================= */
+
+.slider-btn {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: 0.3s;
+}
+
+.slider-btn:hover {
+    background: #aa7c11;
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
+
+
+/* =========================================================
+   BOTÓN RESERVAR
+========================================================= */
+
+.btn-reservar {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 13px 28px;
+
+    background: #aa7c11;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    border: 1px solid #aa7c11;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-reservar:hover {
+    background: transparent;
+    color: #aa7c11;
+}
+
+
+/* =========================================================
+   FOTOS DE LA DERECHA
+========================================================= */
+
 .fotos {
     width: 100%;
 
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: (2, 1fr);
+
+    grid-template-rows: repeat(2, 1fr);
+
     gap: 15px;
 }
 
 .fotos img {
     width: 100%;
+
     aspect-ratio: 16 / 10;
 
     object-fit: cover;
+
     border-radius: 10px;
 
     cursor: pointer;
+
     transition: 0.3s;
 }
 
@@ -511,7 +764,536 @@ nav.scrolled {
     transform: scale(1.03);
 }
 
+
+
+/* =========================================================
+   NUESTRAS ZONAS
+========================================================= */
+
+.zonas {
+    width: 100%;
+    max-width: 1800px;
+    margin: 50px auto;
+
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+
+/* CONTENEDOR */
+
+.zonas1 {
+    width: 100%;
+    max-width: 1900px;
+
+    margin: 40px auto;
+
+    min-height: 60vh;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+/* CADA ZONA */
+
+.zona {
+    width: 100%;
+    height: 50vh;
+
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border: 2px solid #aa7c11;
+
+    border-radius: 10px;
+}
+
+
+/* IMÁGENES */
+
+.zona img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+
+/* TÍTULOS */
+
+.zona h2 {
+    margin-top: 15px;
+
+    color: white;
+
+    font-size: 24px;
+}
+
+
+/* DESCRIPCIÓN */
+
+.zona p {
+    margin-top: 10px;
+
+    color: white;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+.zona {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.zona:hover {
+    transform: translateY(-8px);
+    border-color: #ffffff;
+}
+
+
+
+/*Eventos*/
+
+.evento1{
+    width: 100%;
+    max-width: 1800px;
+    margin: 50px auto;
+
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+
+      .eventos-slider {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    min-height: 480px;
+    overflow: hidden;
+    background: #000;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+ 
+  .eventos-slider .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 8%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s;
+    background-size: cover;
+    background-position: center;
+  }
+ 
+  .eventos-slider .slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.75) 100%);
+    z-index: 0;
+  }
+ 
+  .eventos-slider .slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    z-index: 1;
+  }
+ 
+  .eventos-slider .slide-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+  }
+ 
+  .eventos-slider .slide-eyebrow {
+    color: #aa7c11;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: block;
+  }
+ 
+  .eventos-slider .slide-title {
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 700;
+    margin: 0 0 20px;
+    line-height: 1.15;
+  }
+ 
+  .eventos-slider .slide-title span {
+    color: #aa7c11;
+  }
+ 
+  .eventos-slider .slide-text {
+    color: #e6e6e6;
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    line-height: 1.6;
+    margin: 0 0 32px;
+  }
+ 
+  .eventos-slider .slide-btn {
+    display: inline-block;
+    padding: 14px 38px;
+    background: transparent;
+    border: 2px solid #aa7c11;
+    color: #aa7c11;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+ 
+  .eventos-slider .slide-btn:hover {
+    background: #aa7c11;
+    color: #000;
+  }
+ 
+  /* Flechas */
+  .eventos-slider .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid #aa7c11;
+    color: #aa7c11;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+ 
+  .eventos-slider .arrow:hover {
+    background: #aa7c11;
+    color: #000;
+  }
+ 
+  .eventos-slider .arrow.prev { left: 24px; }
+  .eventos-slider .arrow.next { right: 24px; }
+ 
+  /* Puntos indicadores */
+  .eventos-slider .dots {
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    gap: 12px;
+  }
+ 
+  .eventos-slider .dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    border: 1px solid #aa7c11;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    padding: 0;
+  }
+ 
+  .eventos-slider .dot.active {
+    background: #aa7c11;
+  }
+ 
+  @media (max-width: 640px) {
+    .eventos-slider .arrow { width: 38px; height: 38px; font-size: 1.1rem; }
+    .eventos-slider .arrow.prev { left: 10px; }
+    .eventos-slider .arrow.next { right: 10px; }
+  }
+ 
+  /* =========================================================
+     IMÁGENES DE FONDO DE CADA SLIDE
+     Cambia solo la URL de cada uno según tus archivos.
+  ========================================================= */
+  .eventos-slider .slide-1 { background-image: url('../IMG/Eventos.png'); }
+  .eventos-slider .slide-2 { background-image: url('../IMG/Salones.png'); }
+  .eventos-slider .slide-3 { background-image: url('../IMG/tiposdeeventos.png'); }
+  .eventos-slider .slide-4 { background-image: url('../IMG/Paquetes.png'); }
+
+
+
+
+  /*RESTAURANTE*/
+
+.restaurantet{
+        width: 100%;
+    max-width: 1800px;
+    margin: 50px auto;
+
+    text-align: center;
+    font-size: 50px;
+    color: white; 
+}
+
+   .restaurante-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: #000;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+ 
+  .restaurante-section .rest-fotos,
+  .restaurante-section .rest-info {
+    width: 50%;
+    min-height: 620px;
+  }
+ 
+  /* ---- Columna izquierda: fotos ---- */
+  .restaurante-section .rest-fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px;
+  }
+ 
+  .restaurante-section .rest-fotos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+ 
+  /* La primera foto ocupa toda la columna izquierda (destacada) */
+  .restaurante-section .rest-fotos img:first-child {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+  }
+ 
+  /* ---- Columna derecha: info ---- */
+  .restaurante-section .rest-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 6% 8%;
+    background: #0a0a0a;
+  }
+ 
+  .restaurante-section .rest-eyebrow {
+    color: #aa7c11;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+ 
+  .restaurante-section .rest-title {
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    margin: 0 0 20px;
+    line-height: 1.15;
+  }
+ 
+  .restaurante-section .rest-title span {
+    color: #aa7c11;
+  }
+ 
+  .restaurante-section .rest-text {
+    color: #d8d8d8;
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    line-height: 1.7;
+    margin: 0 0 32px;
+  }
+ 
+  .restaurante-section .rest-btn {
+    display: inline-block;
+    padding: 14px 38px;
+    background: transparent;
+    border: 2px solid #aa7c11;
+    color: #aa7c11;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+ 
+  .restaurante-section .rest-btn:hover {
+    background: #aa7c11;
+    color: #000;
+  }
+ 
+  /* ---- Responsive: apila en móvil ---- */
+  @media (max-width: 900px) {
+    .restaurante-section .rest-fotos,
+    .restaurante-section .rest-info {
+      width: 100%;
+      min-height: auto;
+    }
+ 
+    .restaurante-section .rest-fotos {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 220px 110px 110px;
+    }
+ 
+    .restaurante-section .rest-fotos img:first-child {
+      grid-row: 1 / 2;
+      grid-column: 1 / 3;
+    }
+ 
+    .restaurante-section .rest-info {
+      padding: 40px 8%;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+
+
+
+  /*PROMOCIONES*/
+
+  .promociones{
+        width: 100%;
+    max-width: 1800px;
+    margin: 50px auto;
+
+    text-align: center;
+    font-size: 50px;
+    color: white; 
+}
+
+  .promo-fotos {
+    width: 100%;
+    position: relative;
+    display: flex;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #000;
+  }
+ 
+  .promo-fotos .foto {
+    position: relative;
+    width: 33.3333%;
+    height: 420px;
+    overflow: hidden;
+  }
+ 
+  .promo-fotos .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+  }
+ 
+  .promo-fotos .foto::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    transition: background 0.5s ease;
+  }
+ 
+  .promo-fotos .foto:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.7);
+  }
+ 
+  .promo-fotos .foto:hover::after {
+    background: rgba(170,124,17,0.25); /* dorado translúcido al pasar el mouse */
+  }
+ 
+  /* ---- Botón centrado sobre las 3 fotos ---- */
+  .promo-fotos .promo-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: inline-block;
+    padding: 16px 44px;
+    background: rgba(0,0,0,0.55);
+    border: 2px solid #aa7c11;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 2px;
+    white-space: nowrap;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+ 
+  .promo-fotos .promo-btn:hover {
+    background: #aa7c11;
+    color: #000;
+  }
+ 
+  /* ---- Responsive ---- */
+  @media (max-width: 700px) {
+    .promo-fotos {
+      flex-wrap: wrap;
+    }
+ 
+    .promo-fotos .foto {
+      width: 100%;
+      height: 220px;
+    }
+ 
+    .promo-fotos .promo-btn {
+      padding: 12px 28px;
+      font-size: 0.8rem;
+    }
+  }
+
+
+
 /* CONTACTO Y UBICACIÓN */
+
+ .contacto{
+        width: 100%;
+    max-width: 1800px;
+    margin: 50px auto;
+
+    text-align: center;
+    font-size: 50px;
+    color: white; 
+}
 
 .Contacto {
     background-color: #0D0D0D;
@@ -634,7 +1416,7 @@ nav.scrolled {
 ========================= */
 
 .ubicacion {
-    width: 900%;
+    width: 100%;
     max-width: 800px;
 
     margin: 40px auto 0;
@@ -895,6 +1677,8 @@ nav.scrolled {
 
 
 
+
+
 /* =========================
    PORTAL DE CLIENTES
 ========================= */
@@ -1117,4 +1901,292 @@ footer {
     justify-content: space-between; 
     font-size: 12px; 
     color: #FFFFFF;
+}
+
+
+/* =========================================================
+   =========================================================
+   RESPONSIVE — BREAKPOINTS GENERALES
+   Añadido para adaptar todo el sitio a tablet y móvil.
+   Requiere que el <head> de cada página HTML tenga:
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   =========================================================
+========================================================= */
+
+/* -----------------------------------------------------
+   TABLET GRANDE / LAPTOP PEQUEÑO (≤ 1200px)
+----------------------------------------------------- */
+@media (max-width: 1200px) {
+
+    .zonas1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-contenedor {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* -----------------------------------------------------
+   TABLET (≤ 992px)
+----------------------------------------------------- */
+@media (max-width: 992px) {
+
+    .hero {
+        height: 550px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 12px 8px;
+    }
+
+    .habitacion {
+        grid-template-columns: 1fr;
+    }
+
+    .info {
+        order: 2;
+    }
+
+    .fotos {
+        order: 1;
+    }
+
+    .Contacto {
+        grid-template-columns: 1fr;
+    }
+
+    .ubicacion {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .zonas1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .zona {
+        height: auto;
+    }
+}
+
+
+/* -----------------------------------------------------
+   MÓVIL GRANDE (≤ 768px)
+----------------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* Logo más pequeño para que no se encime con el menú */
+    .logo {
+        font-size: 26px;
+        top: 14px;
+        left: 15px;
+    }
+
+    /* Menú hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    nav > ul {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        margin: 0;
+
+        background-color: rgba(13, 13, 13, 0.97);
+        backdrop-filter: blur(10px);
+    }
+
+    nav > ul.abierto {
+        display: flex;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        padding: 14px 10px;
+        font-size: 17px;
+    }
+
+    .submenu-items {
+        position: static;
+
+        width: 100%;
+
+        background-color: rgba(255, 255, 255, 0.05);
+
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .submenu-items a {
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .submenu-items a:hover {
+        color: #0D0D0D;
+    }
+
+    /* Hero y formulario de reserva */
+    .hero {
+        height: 620px;
+    }
+
+    .form-reserva {
+        bottom: 15px;
+        padding: 12px;
+    }
+
+    .fila {
+        gap: 10px;
+    }
+
+    .campo input,
+    .reserva {
+        width: 100%;
+    }
+
+    .campo {
+        width: 45%;
+    }
+
+    /* Valoraciones */
+    .valoracion {
+        flex: 1 1 45%;
+        border-right: none;
+        border-bottom: 2px solid #333;
+        padding-bottom: 15px;
+    }
+
+    /* Fotos de habitación */
+    .fotos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Zonas */
+    .zonas1 {
+        grid-template-columns: 1fr 1fr;
+        padding: 15px;
+    }
+
+    /* Slider de eventos */
+    .eventos-slider {
+        height: 100vh;
+    }
+
+    .eventos-slider .slide {
+        padding: 0 6%;
+    }
+
+    /* Restaurante */
+    .restaurante-section .rest-title {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+    }
+
+    /* Contacto */
+    .formulario-contacto {
+        padding: 20px;
+    }
+
+    .formulario-contacto h2 {
+        font-size: 26px;
+    }
+
+    /* Habitaciones (ficha con slider + formulario) */
+    .habitaciones {
+        width: 95%;
+        padding: 18px;
+    }
+
+    /* Portal de clientes */
+    .formulario-portal {
+        padding: 30px 20px;
+    }
+
+    .opciones-portal {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    /* Footer */
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+        padding: 50px 7%;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-redes,
+    .footer-columna {
+        align-items: center;
+    }
+
+    .footer-final {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+
+/* -----------------------------------------------------
+   MÓVIL PEQUEÑO (≤ 480px)
+----------------------------------------------------- */
+@media (max-width: 480px) {
+
+    .intro h1 {
+        font-size: clamp(40px, 12vw, 70px);
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero {
+        height: 560px;
+    }
+
+    .campo {
+        width: 100%;
+    }
+
+    .valoracion {
+        flex: 1 1 100%;
+    }
+
+    .fotos {
+        grid-template-columns: 1fr;
+    }
+
+    .zonas1 {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-fotos .promo-btn {
+        white-space: normal;
+        text-align: center;
+    }
+
+    .mapa {
+        height: 320px;
+    }
+
+    .formulario-portal {
+        padding: 25px 15px;
+    }
 }

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <link rel="stylesheet" href="../Estilos/Estilos.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../Estilos/Estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
 
@@ -26,7 +26,7 @@
     <ul>
 
         <li>
-            <a href="Index.html">Inicio</a>
+            <a href="../index.html">Inicio</a>
         </li>
 
         <li>
@@ -50,10 +50,10 @@
         <li class="dropdown">
             <a href="galeria.html">Galería y opiniones ▾</a>
 
-<ul class="submenu-items">
-    <li><a href="galeria.html#galeria">GALERÍA</a></li>
-    <li><a href="galeria.html#opiniones">OPINIONES</a></li>
-</ul>
+            <ul class="submenu-items">
+                <li><a href="galeria.html#galeria">GALERÍA</a></li>
+                <li><a href="galeria.html#opiniones">OPINIONES</a></li>
+            </ul>
         </li>
 
         <!-- EVENTOS -->
@@ -85,12 +85,12 @@
 
         <!-- PROMOCIONES -->
         <li class="dropdown">
-            <a href="promociones.html">Promociones </a>
+            <a href="promociones.html">Promociones</a>
         </li>
 
         <!-- CONTACTO -->
         <li>
-            <a href="index.html#contacto">Contacto</a>
+            <a href="../index.html#contacto">Contacto</a>
         </li>
 
         <!-- PORTAL -->
@@ -105,104 +105,102 @@
 </nav>
 
 
-    <!-- PORTAL DE CLIENTES -->
+<!-- PORTAL DE CLIENTES -->
 
-    <main class="portal-clientes">
+<main class="portal-clientes">
 
-        <div class="formulario-portal">
+    <div class="formulario-portal">
 
-            <h1>Portal de Clientes</h1>
+        <h1>Portal de Clientes</h1>
 
-            <p class="descripcion-portal">
-                Ingresa tus datos para acceder a tu información
-                y gestionar tus reservas.
-            </p>
+        <p class="descripcion-portal">
+            Ingresa tus datos para acceder a tu información
+            y gestionar tus reservas.
+        </p>
 
+        <form>
 
-            <form>
+            <!-- NOMBRE -->
 
-                <!-- NOMBRE -->
+            <label for="nombre">
+                Nombre completo
+            </label>
 
-                <label for="nombre">
-                    Nombre completo
-                </label>
-
-                <input
-                    type="text"
-                    id="nombre"
-                    placeholder="Ingresa tu nombre"
-                    required
-                >
-
-
-                <!-- CORREO -->
-
-                <label for="correo">
-                    Correo electrónico
-                </label>
-
-                <input
-                    type="email"
-                    id="correo"
-                    placeholder="ejemplo@correo.com"
-                    required
-                >
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Ingresa tu nombre"
+                required
+            >
 
 
-                <!-- DOCUMENTO -->
+            <!-- CORREO -->
 
-                <label for="documento">
-                    Número de documento
-                </label>
+            <label for="correo">
+                Correo electrónico
+            </label>
 
-                <input
-                    type="number"
-                    id="documento"
-                    placeholder="Ingresa tu documento"
-                    required
-                >
-
-
-                <!-- CONTRASEÑA -->
-
-                <label for="password">
-                    Contraseña
-                </label>
-
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Ingresa tu contraseña"
-                    required
-                >
+            <input
+                type="email"
+                id="correo"
+                placeholder="ejemplo@correo.com"
+                required
+            >
 
 
-                <!-- BOTÓN -->
+            <!-- DOCUMENTO -->
 
-                <button type="submit">
-                    Ingresar
-                </button>
+            <label for="documento">
+                Número de documento
+            </label>
+
+            <input
+                type="number"
+                id="documento"
+                placeholder="Ingresa tu documento"
+                required
+            >
 
 
-            </form>
+            <!-- CONTRASEÑA -->
+
+            <label for="password">
+                Contraseña
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Ingresa tu contraseña"
+                required
+            >
 
 
-            <div class="opciones-portal">
+            <!-- BOTÓN -->
 
-                <a href="#">
-                    ¿Olvidaste tu contraseña?
-                </a>
+            <button type="submit">
+                Ingresar
+            </button>
 
-                <a href="#">
-                    Crear una cuenta
-                </a>
 
-            </div>
+        </form>
+
+
+        <div class="opciones-portal">
+
+            <a href="#">
+                ¿Olvidaste tu contraseña?
+            </a>
+
+            <a href="#">
+                Crear una cuenta
+            </a>
 
         </div>
 
-    </main>
+    </div>
 
+</main>
 
 
 <footer>
@@ -216,18 +214,18 @@
 
         <div class="footer-columna">
             <h3>HOTEL</h3>
-            <a href="#hotel">El Hotel</a>
-            <a href="#">Habitaciones</a>
-            <a href="#">Servicios</a>
-            <a href="#">Eventos</a>
+            <a href="../index.html">Inicio</a>
+            <a href="Habitaciones.html">Habitaciones</a>
+            <a href="biniestar.index.html">Servicios</a>
+            <a href="eventos.index.html">Eventos</a>
         </div>
 
         <div class="footer-columna">
             <h3>RESTAURANTE</h3>
-            <a href="#carta">Carta</a>
-            <a href="#desayuno">Desayunos</a>
-            <a href="#reservas">Reservas</a>
-            <a href="#contacto">Contacto</a>
+            <a href="gastronomia.index.html#carta">Carta</a>
+            <a href="gastronomia.index.html#desayuno">Desayunos</a>
+            <a href="gastronomia.index.html#reservas">Reservas</a>
+            <a href="../index.html#contacto">Contacto</a>
         </div>
 
         <div class="footer-columna">

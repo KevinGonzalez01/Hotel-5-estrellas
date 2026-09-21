@@ -163,7 +163,7 @@ nav a:hover {
 .submenu-items a {
     padding: 12px 18px;
 
-    color: #0D0D0D;
+    color: #ffffff;
     font-size: 13px;
 
     white-space: nowrap;
@@ -193,7 +193,7 @@ nav a:hover {
     overflow: hidden;
 }
 
- {
+.hero img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -247,6 +247,30 @@ nav a:hover {
 .hero-contenido {
     position: relative;
     z-index: 2;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 120px 30px 80px;
+
+    /* Imagen ocupando todo el fondo */
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("../IMG/Fondo para todos.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .hero-contenido p:first-child {
@@ -345,7 +369,7 @@ nav a:hover {
 }
 
 .titulo-seccion > p:first-child {
-    color: #000000;
+    color: #AA7C11;
     letter-spacing: 5px;
     font-size: 13px;
     margin-bottom: 18px;
@@ -436,7 +460,7 @@ button:hover {
 ========================================================= */
 
 footer {
-    background-color: #aa7c11be;
+    background-color: #AA7C11;
 }
 
 .footer-contenedor {
@@ -510,7 +534,7 @@ footer {
     overflow: hidden;
 }
 
- {
+.restaurante-imagen img {
     width: 100%;
     height: 100%;
     min-height: 600px;
@@ -607,7 +631,7 @@ footer {
     overflow: hidden;
 }
 
- {
+.especial-imagen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -784,7 +808,8 @@ footer {
    a ese bloque. Revisa el HTML y usa el mismo nombre en ambos
    lados, por ejemplo "contacto" en minúscula en los dos. */
 
-.contacto {
+.contacto,
+.Contacto {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -813,7 +838,7 @@ footer {
     overflow: hidden;
 }
 
- {
+.mapa img {
     width: 100%;
     height: 100%;
     min-height: 500px;
@@ -846,7 +871,7 @@ footer {
     overflow: hidden;
 }
 
- {
+.servicio-imagen img {
     width: 100%;
     height: 100%;
     min-height: 600px;
@@ -935,7 +960,7 @@ footer {
 
 .zonas {
     padding: 110px 8%;
-    background-color: #aa7c11be;
+    background-color: #AA7C11;
 }
 
 .zonas .subtitulo {
@@ -984,11 +1009,12 @@ footer {
     overflow: hidden;
 }
 
- {
+.gimnasio-imagen img {
     width: 100%;
     height: 100%;
     min-height: 600px;
     object-fit: cover;
+    display: block;
 }
 
 .gimnasio-texto {
@@ -1073,7 +1099,7 @@ footer {
     overflow: hidden;
 }
 
- {
+.salon-imagen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1148,7 +1174,7 @@ footer {
     overflow: hidden;
 }
 
- {
+.experiencia-imagen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1206,7 +1232,7 @@ footer {
     overflow: hidden;
 }
 
- {
+.empresarial-imagen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1345,7 +1371,7 @@ footer {
     overflow: hidden;
 }
 
- {
+.promocion-imagen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1487,6 +1513,7 @@ footer {
 
 .foto {
     position: relative;
+    min-height: 280px;
     background-color: #292929;
     overflow: hidden;
 }
@@ -1496,7 +1523,7 @@ footer {
     grid-row: span 2;
 }
 
- {
+.foto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
