@@ -366,7 +366,7 @@ nav.scrolled {
 .submenu-items a {
     padding: 12px 18px;
 
-    color: #0D0D0D;
+    color: #030303;
 
     font-size: 13px;
 
@@ -376,7 +376,7 @@ nav.scrolled {
 
 .submenu-items a:hover {
     background-color: #aa7c11;
-    color: #0D0D0D;
+    color: #ffffff;
 }
 
 
