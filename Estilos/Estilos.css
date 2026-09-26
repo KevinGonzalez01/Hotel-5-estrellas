@@ -2096,96 +2096,44 @@ footer {
 /* -----------------------------------------------------
    MÓVIL GRANDE (≤ 768px)
 ----------------------------------------------------- */
-@media (max-width: 768px) {
+/* MENÚ */
 
-    /* Logo más pequeño para que no se encime con el menú */
-    .logo {
-        font-size: 26px;
-        top: 14px;
-        left: 15px;
-    }
-
-    /* MENÚ RESPONSIVE */
-    .menu-toggle {
-        display: none;
-    }
-
-    nav {
-        height: 64px;
-        background-color: rgba(0, 0, 0, 0.82);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-    }
+@media (max-width: 1200px) {
 
     nav > ul {
-        display: flex;
-
-        position: absolute;
-        top: 64px;
-        left: 0;
-
-        width: 100%;
-        max-height: calc(100vh - 64px);
-        overflow-y: auto;
-
-        flex-direction: column;
-        align-items: stretch;
-
-        margin: 0;
-        padding: 8px 0 14px;
-
-        background-color: rgba(8, 8, 8, 0.98);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-
-        border-top: 1px solid rgba(170, 124, 17, 0.45);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
-    }
-
-    nav > ul.abierto {
-        display: flex;
-    }
-
-    nav li {
-        width: 100%;
-        text-align: center;
+        margin-right: 15px;
+        gap: 0;
     }
 
     nav a {
-        padding: 13px 16px;
         font-size: 16px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        padding: 12px 8px;
     }
 
-    nav a:hover {
-        background-color: rgba(170, 124, 17, 0.16);
-        color: #C9A227;
+    .logo {
+        font-size: 34px;
+        left: 20px;
     }
 
-    .submenu-items {
-        position: static;
 
-        width: 100%;
+    /* HERO */
 
-        background-color: rgba(255, 255, 255, 0.05);
-
-        box-shadow: none;
-        border-radius: 0;
+    .hero {
+        height: 600px;
     }
 
-    .submenu-items a {
-        color: #ffffff;
-        text-align: center;
+    .hero-contenido {
+        min-height: 600px;
+        padding: 100px 30px 60px;
     }
 
-    .submenu-items a:hover {
-        color: #0D0D0D;
+    .hero h1 {
+        font-size: 60px;
     }
+
+
 
     /* Hero y formulario de reserva */
-    .hero {
-        height: 620px;
-    }
 
     .form-reserva {
         bottom: 15px;
