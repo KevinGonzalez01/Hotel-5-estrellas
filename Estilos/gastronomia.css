@@ -32,33 +32,32 @@ a {
 }
 
 
-/*LOGO*/
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo {
     position: absolute;
-
-    top: 15px;
-    left: 40px;
-
-    color: #FFFFFF;
+    top: 8px;
+    left: 30px;
 
     font-family: "Mea Culpa", cursive;
-
-    font-size: 50px;
-
+    font-size: 40px;
     font-weight: lighter;
-
     line-height: 1;
 
-    z-index: 10;
+    color: #ffffff;
 
     white-space: nowrap;
+    z-index: 10;
+
+    transition: color 0.4s ease;
 }
 
 
-/* =========================
-   MENU
-========================= */
+/* =========================================================
+   MENU PRINCIPAL
+========================================================= */
 
 nav {
     position: fixed;
@@ -73,7 +72,6 @@ nav {
 
     z-index: 9999;
 
-    /* Al principio es transparente */
     background-color: transparent;
 
     transition: background-color 0.4s ease,
@@ -81,30 +79,12 @@ nav {
                 backdrop-filter 0.4s ease;
 }
 
-
-/* =========================
-   LOGO
-========================= */
-
-.logo {
-    position: absolute;
-    left: 30px;
-    top: 8px;
-
-    font-family: "Mea Culpa", cursive;
-    font-size: 40px;
-
-    color: #ffffff;
-
-    white-space: nowrap;
-
-    transition: color 0.4s ease;
+nav.scrolled {
+    background-color: rgba(207, 205, 205, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
-
-
-/* =========================
-   MENU PRINCIPAL
-========================= */
 
 nav > ul {
     list-style: none;
@@ -118,11 +98,9 @@ nav > ul {
     gap: 5px;
 }
 
-
 nav li {
     position: relative;
 }
-
 
 nav a {
     display: block;
@@ -131,40 +109,23 @@ nav a {
 
     color: #fdfdfd;
 
-    text-decoration: none;
-
     font-size: 20px;
     font-weight: 600;
 
     transition: 0.3s;
 }
 
-
 nav a:hover {
     color: #aa7c11;
 }
 
 
-/* =========================
-   MENU CUANDO HACES SCROLL
-========================= */
-
-nav.scrolled {
-    background-color: rgba(207, 205, 205, 0.2);
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-}
-
-
-/* =========================
+/* =========================================================
    TOGGLE MENÚ MÓVIL (hamburguesa)
    Requiere en el HTML un botón: <button class="menu-toggle">&#9776;</button>
    dentro de <nav>, antes o después del <ul>, y que el JS le añada/quite
    la clase "abierto" a nav > ul al hacer click.
-========================= */
+========================================================= */
 
 .menu-toggle {
     display: none;
@@ -179,22 +140,32 @@ nav.scrolled {
     cursor: pointer;
 
     position: absolute;
-    right: 20px;
+    left: 20px;
     top: 12px;
 
     z-index: 10000;
 }
 
+.menu-toggle:hover {
+    background: transparent;
+    color: #aa7c11;
+}
 
-/* =========================
+.redes {
+    display: flex;
+    gap: 18px;
+    font-size: 19px;
+}
+
+
+/* =========================================================
    SUBMENUS
-========================= */
+========================================================= */
 
 .submenu-items {
     display: none;
 
     position: absolute;
-
     top: 100%;
     left: 0;
 
@@ -206,47 +177,35 @@ nav.scrolled {
     list-style: none;
 
     background-color: rgba(207, 205, 205, 0.2);
-
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-
     border-radius: 0 0 8px 8px;
-
-    color: rgb(248, 248, 248);
 }
-
-
-/* Mostrar submenú */
 
 .dropdown:hover > .submenu-items {
     display: block;
 }
 
-
-/* Opciones */
-
 .submenu-items li {
     width: 100%;
 }
 
-
 .submenu-items a {
     padding: 12px 18px;
 
-    color: #f8f4f4;
-
+    color: #ffffff;
     font-size: 13px;
 
     white-space: nowrap;
 }
 
-
 .submenu-items a:hover {
     background-color: #aa7c11;
-    color: #ffffff;
+    color: #0D0D0D;
 }
+
 
 /* =========================================================
    HERO / BANNER (con selector de imagen)
@@ -1843,7 +1802,7 @@ footer {
 
     .logo {
         font-size: 34px;
-        left: 20px;
+        left: 65px;
     }
 
     .menu-toggle {
@@ -2143,11 +2102,11 @@ footer {
 
     .logo {
         font-size: 26px;
-        left: 15px;
+        left: 55px;
     }
 
     .menu-toggle {
-        right: 15px;
+        left: 15px;
     }
 
     nav a {

@@ -312,10 +312,15 @@ nav.scrolled {
     cursor: pointer;
 
     position: absolute;
-    right: 20px;
+    left: 20px;
     top: 12px;
 
     z-index: 10000;
+}
+
+.menu-toggle:hover {
+    background: transparent;
+    color: #aa7c11;
 }
 
 
@@ -346,8 +351,6 @@ nav.scrolled {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 
     border-radius: 0 0 8px 8px;
-
-    color: rgb(248, 248, 248);
 }
 
 
@@ -368,7 +371,7 @@ nav.scrolled {
 .submenu-items a {
     padding: 12px 18px;
 
-    color: #f8f4f4;
+    color: #ffffff;
 
     font-size: 13px;
 
@@ -378,7 +381,7 @@ nav.scrolled {
 
 .submenu-items a:hover {
     background-color: #aa7c11;
-    color: #ffffff;
+    color: #0D0D0D;
 }
 
 
@@ -2056,11 +2059,12 @@ footer {
 
     .logo {
         font-size: 34px;
-        left: 20px;
+        left: 65px;
     }
 
     .menu-toggle {
         display: block;
+        left: 20px;
     }
 
     nav > ul {
@@ -2166,11 +2170,11 @@ footer {
 
     .logo {
         font-size: 26px;
-        left: 15px;
+        left: 55px;
     }
 
     .menu-toggle {
-        right: 15px;
+        left: 15px;
     }
 
     nav a {
