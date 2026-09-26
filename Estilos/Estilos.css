@@ -2025,163 +2025,298 @@ footer {
 
 
 /* =========================================================
-   TABLET / LAPTOP PEQUEÑO
+   =========================================================
+   RESPONSIVE — reglas añadidas para adaptar todo el sitio
+   a tablets y móviles. Van al final a propósito: en CSS,
+   entre reglas con la misma especificidad gana la que
+   aparece más abajo en el archivo, así que estas overrides
+   funcionan sin tocar el resto del código de arriba.
+
+   IMPORTANTE (HTML): si el <head> de tus páginas no tiene
+   todavía esta línea, añádela para que el móvil respete
+   estos anchos en vez de simular un escritorio:
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 ========================================================= */
 
-@media (max-width: 1200px) {
+/* ---- Tablets grandes / laptops pequeños (≤1024px) ---- */
+@media (max-width: 1024px) {
 
-    /* MENÚ */
-
-    nav {
-        height: auto;
-        min-height: 70px;
-        padding: 5px 10px;
+    .zonas1 {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    nav > ul {
-        margin-right: 15px;
-        gap: 0;
+    .habitacion {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    nav a {
-        font-size: 16px;
-        padding: 12px 8px;
-    }
-
-    .logo {
-        font-size: 34px;
-        left: 20px;
+    .fotos {
+        order: -1;
     }
 }
 
-
-/* =========================================================
-   TABLET
-========================================================= */
-
+/* ---- Tablets (≤900px) ---- */
 @media (max-width: 900px) {
 
-    /* MENÚ */
-
-    nav {
-        height: auto;
-        min-height: 70px;
-        padding: 5px 10px;
-    }
-
     nav > ul {
-        width: 100%;
-
-        justify-content: flex-end;
-        flex-wrap: wrap;
-
-        margin: 0;
-        padding-left: 150px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 10px 7px;
-    }
-
-    .redes {
         display: none;
-    }
 
-    /* SUBMENÚ */
+        position: absolute;
+        top: 70px;
+        left: 0;
 
-    .submenu-items {
-        min-width: 190px;
-    }
-
-    .submenu-items a {
-        font-size: 12px;
-        padding: 11px 15px;
-    }
-}
-
-
-/* =========================================================
-   CELULAR
-========================================================= */
-
-@media (max-width: 600px) {
-
-    /* MENÚ */
-
-    nav {
-        position: fixed;
-
-        height: auto;
-        min-height: 60px;
-
-        padding: 5px 10px;
+        width: 100%;
 
         flex-direction: column;
         align-items: stretch;
-    }
 
-    .logo {
-        position: relative;
-
-        top: 0;
-        left: 0;
-
-        font-size: 30px;
-
-        text-align: center;
-
-        padding: 5px 0;
-    }
-
-    nav > ul {
-        width: 100%;
-
-        padding: 0;
         margin: 0;
-
-        justify-content: center;
-        align-items: center;
-
-        flex-wrap: wrap;
-
         gap: 0;
+
+        background-color: rgba(13, 13, 13, 0.97);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    nav > ul.abierto {
+        display: flex;
     }
 
     nav li {
-        flex-shrink: 0;
+        width: 100%;
     }
 
     nav a {
-        font-size: 11px;
-        padding: 8px 5px;
+        padding: 14px 25px;
+        font-size: 17px;
     }
 
-    /* SUBMENÚ */
-
     .submenu-items {
-        min-width: 160px;
+        position: static;
+
+        min-width: 100%;
+
+        background-color: rgba(255, 255, 255, 0.05);
+
+        border-radius: 0;
+
+        box-shadow: none;
     }
 
     .submenu-items a {
-        font-size: 11px;
-        padding: 10px 12px;
+        color: #ffffff;
+        padding: 10px 40px;
+    }
+
+    .submenu-items a:hover {
+        background-color: #aa7c1140;
+        color: #ffffff;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        height: 100vh;
+        min-height: 560px;
+    }
+
+    .zonas1 {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .zona {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .Contacto {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .footer-contenedor {
+        grid-template-columns: 1fr 1fr;
+        padding: 50px 8%;
+        gap: 35px;
     }
 }
 
-
-/* =========================================================
-   CELULARES MUY PEQUEÑOS
-========================================================= */
-
-@media (max-width: 380px) {
+/* ---- Móviles grandes (≤700px) ---- */
+@media (max-width: 700px) {
 
     .logo {
+        left: 15px;
+        font-size: 30px;
+    }
+
+    .menu-toggle {
+        right: 15px;
+    }
+
+    .hero {
+        height: 100vh;
+        min-height: 620px;
+    }
+
+    .form-reserva {
+        width: calc(100% - 20px);
+        bottom: 15px;
+        padding: 12px;
+    }
+
+    .fila {
+        gap: 10px;
+    }
+
+    .campo {
+        flex: 1 1 100%;
+    }
+
+    .campo input {
+        width: 100%;
+    }
+
+    .reserva {
+        width: 100%;
+    }
+
+    .valoraciones {
+        padding: 15px 10px;
+    }
+
+    .valoracion {
+        flex: 1 1 45%;
+        border-right: none;
+        border-bottom: 1px solid #333;
+        padding: 15px 5px;
+    }
+
+    .nota {
         font-size: 26px;
     }
 
-    nav a {
-        font-size: 10px;
-        padding: 7px 4px;
+    .habitacion11,
+    .zonas,
+    .evento1,
+    .restaurantet,
+    .promociones,
+    .contacto {
+        font-size: clamp(28px, 8vw, 40px);
+        margin: 35px auto;
+    }
+
+    .fotos {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+    }
+
+    .zonas1 {
+        grid-template-columns: 1fr;
+    }
+
+    .eventos-slider {
+        height: 100vh;
+        min-height: 520px;
+    }
+
+    .eventos-slider .slide {
+        padding: 0 6%;
+    }
+
+    .formulario-contacto {
+        padding: 20px;
+    }
+
+    .ubicacion h2 {
+        font-size: 26px;
+    }
+
+    .mapa {
+        height: 300px;
+        border-radius: 14px;
+    }
+
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+        padding: 40px 8%;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-redes,
+    .footer-columna {
+        align-items: center;
+    }
+
+    .footer-final {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 20px 8%;
+    }
+
+    .portal-clientes {
+        padding: 25px 15px;
+    }
+
+    .formulario-portal {
+        padding: 30px 20px;
+    }
+
+    .opciones-portal {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
     }
 }
+
+/* ---- Móviles pequeños (≤480px) ---- */
+@media (max-width: 480px) {
+
+    .intro-contenido {
+        padding: 15px;
+    }
+
+    .intro button {
+        padding: 12px 25px;
+        font-size: 13px;
+    }
+
+    .valoracion {
+        flex: 1 1 100%;
+    }
+
+    .info h1 {
+        font-size: clamp(24px, 8vw, 32px);
+    }
+
+    .info h2 {
+        line-height: 1.8;
+        font-size: 17px;
+    }
+
+    .btn-reservar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .zona img {
+        height: 180px;
+    }
+
+    .eventos-slider .arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 1rem;
+    }
+
+    .footer-logo h2 {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+}
+
