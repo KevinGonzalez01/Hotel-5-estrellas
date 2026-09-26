@@ -1,4 +1,4 @@
-* {
+}* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -2026,16 +2026,7 @@ footer {
 
 /* =========================================================
    =========================================================
-   RESPONSIVE — reglas añadidas para adaptar todo el sitio
-   a tablets y móviles. Van al final a propósito: en CSS,
-   entre reglas con la misma especificidad gana la que
-   aparece más abajo en el archivo, así que estas overrides
-   funcionan sin tocar el resto del código de arriba.
-
-   IMPORTANTE (HTML): si el <head> de tus páginas no tiene
-   todavía esta línea, añádela para que el móvil respete
-   estos anchos en vez de simular un escritorio:
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+   RESPONSIVE
 ========================================================= */
 
 /* ---- Tablets grandes / laptops pequeños (≤1024px) ---- */
@@ -2055,24 +2046,60 @@ footer {
     }
 }
 
+
 /* ---- Tablets (≤900px) ---- */
 @media (max-width: 900px) {
 
     /* MENÚ */
 
+    .logo {
+        font-size: 34px;
+        left: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
     nav > ul {
-        margin-right: 15px;
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        margin: 0;
         gap: 0;
+
+        background-color: rgba(13, 13, 13, 0.97);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    nav > ul.abierto {
+        display: flex;
+    }
+
+    nav li {
+        width: 100%;
     }
 
     nav a {
         font-size: 16px;
-        padding: 12px 8px;
+        padding: 14px 25px;
     }
 
-    .logo {
-        font-size: 34px;
-        left: 20px;
+    .submenu-items {
+        position: static;
+        min-width: 100%;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 0;
+        box-shadow: none;
     }
 
 
@@ -2115,7 +2142,7 @@ footer {
     }
 }
 
-/* ---- Móviles grandes (≤700px) ---- */
+/* ---- Móviles grandes (≤600px) ---- */
 @media (max-width: 600px) {
 
     /* =====================================================
@@ -2130,53 +2157,27 @@ footer {
 
     /* =====================================================
        MENÚ
+       (nav sigue siendo la fila fija de 70px con el logo +
+       botón hamburguesa; el <ul> es el panel desplegable
+       de arriba, ya resuelto en el breakpoint de 900px)
     ===================================================== */
 
-    nav {
-        position: fixed;
-        height: auto;
-        min-height: 60px;
-        padding: 5px 10px;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
     .logo {
-        position: relative;
-        top: 0;
-        left: 0;
-        font-size: 30px;
-        text-align: center;
-        padding: 5px 0;
+        font-size: 26px;
+        left: 15px;
     }
 
-    nav > ul {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        justify-content: center;
-        align-items: center;
-        gap: 0;
-    }
-
-    nav li {
-        flex-shrink: 0;
+    .menu-toggle {
+        right: 15px;
     }
 
     nav a {
-        font-size: 11px;
-        padding: 8px 5px;
-    }
-
-
-    /* SUBMENÚ */
-
-    .submenu-items {
-        min-width: 160px;
+        font-size: 15px;
+        padding: 12px 20px;
     }
 
     .submenu-items a {
-        font-size: 11px;
+        font-size: 13px;
         padding: 10px 12px;
     }
 
@@ -2380,4 +2381,3 @@ footer {
         letter-spacing: 3px;
     }
 }
-
