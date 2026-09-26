@@ -2502,26 +2502,9 @@ footer {
 
 @media (max-width: 900px) {
 
-    /* MENÚ */
-
-    nav {
-        height: auto;
-        min-height: 70px;
-        padding: 5px 10px;
-    }
-
-    nav > ul {
-        width: 100%;
-        justify-content: flex-end;
-        flex-wrap: wrap;
-        margin: 0;
-        padding-left: 150px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 10px 7px;
-    }
+    /* MENÚ — el show/hide real vive en el otro bloque
+       de 900px (nav > ul.abierto); aquí solo dejamos lo
+       que no choca con eso. */
 
     .redes {
         display: none;
@@ -2942,7 +2925,7 @@ footer {
         padding: 14px;
     }
 
-    button {
+    button:not(.menu-toggle) {
         width: 100%;
         padding: 15px 20px;
     }
