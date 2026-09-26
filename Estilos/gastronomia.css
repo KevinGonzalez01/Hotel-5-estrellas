@@ -140,27 +140,22 @@ nav a:hover {
     cursor: pointer;
 
     position: absolute;
-    right: 5px;
+    right: 20px;
     top: 12px;
 
     z-index: 10000;
 }
 
-.redes {
-    display: flex;
-    gap: 18px;
-    font-size: 19px;
-}
 
-
-/* =========================================================
+/* =========================
    SUBMENUS
-========================================================= */
+========================= */
 
 .submenu-items {
     display: none;
 
     position: absolute;
+
     top: 100%;
     left: 0;
 
@@ -172,35 +167,47 @@ nav a:hover {
     list-style: none;
 
     background-color: rgba(207, 205, 205, 0.2);
+
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
     border-radius: 0 0 8px 8px;
+
+    color: rgb(248, 248, 248);
 }
+
+
+/* Mostrar submenú */
 
 .dropdown:hover > .submenu-items {
     display: block;
 }
 
+
+/* Opciones */
+
 .submenu-items li {
     width: 100%;
 }
 
+
 .submenu-items a {
     padding: 12px 18px;
 
-    color: #ffffff;
+    color: #f8f4f4;
+
     font-size: 13px;
 
     white-space: nowrap;
 }
 
+
 .submenu-items a:hover {
     background-color: #aa7c11;
     color: #ffffff;
 }
-
 
 /* =========================================================
    HERO / BANNER (con selector de imagen)
