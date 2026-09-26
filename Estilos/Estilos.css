@@ -2058,69 +2058,39 @@ footer {
 /* ---- Tablets (≤900px) ---- */
 @media (max-width: 900px) {
 
+    /* MENÚ */
+
     nav > ul {
-        display: none;
-
-        position: absolute;
-        top: 70px;
-        left: 0;
-
-        width: 100%;
-
-        flex-direction: column;
-        align-items: stretch;
-
-        margin: 0;
+        margin-right: 15px;
         gap: 0;
-
-        background-color: rgba(13, 13, 13, 0.97);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-    }
-
-    nav > ul.abierto {
-        display: flex;
-    }
-
-    nav li {
-        width: 100%;
     }
 
     nav a {
-        padding: 14px 25px;
-        font-size: 17px;
+        font-size: 16px;
+        padding: 12px 8px;
     }
 
-    .submenu-items {
-        position: static;
-
-        min-width: 100%;
-
-        background-color: rgba(255, 255, 255, 0.05);
-
-        border-radius: 0;
-
-        box-shadow: none;
+    .logo {
+        font-size: 34px;
+        left: 20px;
     }
 
-    .submenu-items a {
-        color: #ffffff;
-        padding: 10px 40px;
-    }
 
-    .submenu-items a:hover {
-        background-color: #aa7c1140;
-        color: #ffffff;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
+    /* HERO */
 
     .hero {
-        height: 100vh;
-        min-height: 560px;
+        height: 600px;
     }
+
+    .hero-contenido {
+        min-height: 600px;
+        padding: 100px 30px 60px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
 
     .zonas1 {
         grid-template-columns: repeat(2, 1fr);
@@ -2146,22 +2116,113 @@ footer {
 }
 
 /* ---- Móviles grandes (≤700px) ---- */
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+
+    /* =====================================================
+       BASE
+    ===================================================== */
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       MENÚ
+    ===================================================== */
+
+    nav {
+        position: fixed;
+        height: auto;
+        min-height: 60px;
+        padding: 5px 10px;
+        flex-direction: column;
+        align-items: stretch;
+    }
 
     .logo {
-        left: 15px;
+        position: relative;
+        top: 0;
+        left: 0;
         font-size: 30px;
+        text-align: center;
+        padding: 5px 0;
     }
 
-    .menu-toggle {
-        right: 15px;
+    nav > ul {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
     }
+
+    nav li {
+        flex-shrink: 0;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 8px 5px;
+    }
+
+
+    /* SUBMENÚ */
+
+    .submenu-items {
+        min-width: 160px;
+    }
+
+    .submenu-items a {
+        font-size: 11px;
+        padding: 10px 12px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero {
-        height: 100vh;
-        min-height: 620px;
+        height: 600px;
     }
 
+    .hero-contenido {
+        min-height: 600px;
+        padding: 130px 20px 50px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        letter-spacing: 3px;
+        line-height: 1.1;
+    }
+
+    .hero-contenido p:first-child {
+        font-size: 11px;
+        letter-spacing: 3px;
+        margin-bottom: 18px;
+    }
+
+    .hero-contenido p:not(:first-child) {
+        font-size: 15px;
+        margin: 20px 0;
+    }
+
+    .descripcion {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.6;
+        margin: 20px auto;
+    }
+
+    .boton {
+        padding: 14px 25px;
+        font-size: 11px;
+    }
+    
     .form-reserva {
         width: calc(100% - 20px);
         bottom: 15px;
