@@ -1551,11 +1551,6 @@ nav.scrolled {
     width: 36px;
     height: 36px;
 
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 50%;
-
     font-size: 16px;
     cursor: pointer;
 
@@ -1564,11 +1559,6 @@ nav.scrolled {
     justify-content: center;
 
     z-index: 3;
-    transition: background-color 0.3s;
-}
-
-.slider-flecha:hover {
-    background-color: #aa7c11;
 }
 
 .slider-flecha.anterior {
