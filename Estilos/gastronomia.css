@@ -32,32 +32,33 @@ a {
 }
 
 
-/* =========================================================
-   LOGO
-========================================================= */
+/*LOGO*/
 
 .logo {
     position: absolute;
-    top: 8px;
-    left: 30px;
+
+    top: 15px;
+    left: 40px;
+
+    color: #FFFFFF;
 
     font-family: "Mea Culpa", cursive;
-    font-size: 40px;
+
+    font-size: 50px;
+
     font-weight: lighter;
+
     line-height: 1;
 
-    color: #ffffff;
-
-    white-space: nowrap;
     z-index: 10;
 
-    transition: color 0.4s ease;
+    white-space: nowrap;
 }
 
 
-/* =========================================================
-   MENU PRINCIPAL
-========================================================= */
+/* =========================
+   MENU
+========================= */
 
 nav {
     position: fixed;
@@ -72,6 +73,7 @@ nav {
 
     z-index: 9999;
 
+    /* Al principio es transparente */
     background-color: transparent;
 
     transition: background-color 0.4s ease,
@@ -79,12 +81,30 @@ nav {
                 backdrop-filter 0.4s ease;
 }
 
-nav.scrolled {
-    background-color: rgba(207, 205, 205, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    position: absolute;
+    left: 30px;
+    top: 8px;
+
+    font-family: "Mea Culpa", cursive;
+    font-size: 40px;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+
+    transition: color 0.4s ease;
 }
+
+
+/* =========================
+   MENU PRINCIPAL
+========================= */
 
 nav > ul {
     list-style: none;
@@ -98,9 +118,11 @@ nav > ul {
     gap: 5px;
 }
 
+
 nav li {
     position: relative;
 }
+
 
 nav a {
     display: block;
@@ -109,23 +131,40 @@ nav a {
 
     color: #fdfdfd;
 
+    text-decoration: none;
+
     font-size: 20px;
     font-weight: 600;
 
     transition: 0.3s;
 }
 
+
 nav a:hover {
     color: #aa7c11;
 }
 
 
-/* =========================================================
+/* =========================
+   MENU CUANDO HACES SCROLL
+========================= */
+
+nav.scrolled {
+    background-color: rgba(207, 205, 205, 0.2);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
    TOGGLE MENÚ MÓVIL (hamburguesa)
    Requiere en el HTML un botón: <button class="menu-toggle">&#9776;</button>
    dentro de <nav>, antes o después del <ul>, y que el JS le añada/quite
    la clase "abierto" a nav > ul al hacer click.
-========================================================= */
+========================= */
 
 .menu-toggle {
     display: none;
